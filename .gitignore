@@ -1,0 +1,8 @@
+# Obsidian 本机状态（容易冲突）
+.obsidian/workspace*
+.obsidian/cache
+.trash
+
+# 密钥（别进仓库）
+.env
+.env.*

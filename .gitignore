@@ -6,3 +6,8 @@
 # 密钥（别进仓库）
 .env
 .env.*
+
+
+
+# Ignore Smart Environment folder
+.smart-env

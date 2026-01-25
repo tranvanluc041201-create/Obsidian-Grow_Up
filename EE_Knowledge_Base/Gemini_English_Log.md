@@ -36,5 +36,6 @@ that my computer cannot afford it
  more natural:
  so big->so heavy
  can't afford it ->can't handle it
+ 
 4.commander-in-chief
   指挥员,发号施令者

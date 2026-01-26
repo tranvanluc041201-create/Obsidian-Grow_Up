@@ -5,7 +5,7 @@
   "defaultDestinationPath": "_NoteCompanion/Processed",
   "referencePath": "_NoteCompanion/References",
   "attachmentsPath": "_NoteCompanion/Processed/Attachments",
-  "pathToWatch": "_NoteCompanion/Inbox",
+  "pathToWatch": "00_Inbox",
   "logFolderPath": "_NoteCompanion/Logs",
   "backupFolderPath": "_NoteCompanion/Backups",
   "templatePaths": "_NoteCompanion/Templates",

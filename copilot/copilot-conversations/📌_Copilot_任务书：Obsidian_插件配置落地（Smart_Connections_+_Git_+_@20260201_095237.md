@@ -794,3 +794,231 @@ git commit -m "fix: resolve conflicts"
 
 完成后回复我，我将帮你进行最终验证！🚀
 [Timestamp: 2026/02/01 10:00:09]
+
+**user**: D:\obsidian\Eenlish learning这是我的根目录
+[Context: Notes: _ai_workbench/obsidian_plugins_plan.md.md]
+[Timestamp: 2026/02/01 15:00:52]
+
+**ai**: # 📍 配置执行指南（基于你的 Vault 根目录）
+
+根目录：`D:\obsidian\Eenlish learning`
+
+---
+
+## ✅ 你需要执行的 3 个核心任务
+
+### 🔧 任务 1：初始化 Git 仓库（5 分钟）
+
+**操作步骤：**
+
+1. **打开 PowerShell**
+   - 按 `Win + X`，选择"Windows PowerShell"或"终端"
+
+2. **进入你的 Vault 根目录**
+   ```powershell
+   cd "D:\obsidian\Eenlish learning"
+   ```
+
+3. **初始化 Git 仓库**[^1]
+   ```powershell
+   git init
+   ```
+   看到 "Initialized empty Git repository" 即成功
+
+4. **创建 `.gitignore` 文件**[^2]
+   ```powershell
+   New-Item .gitignore -ItemType File
+   ```
+
+5. **编辑 `.gitignore` 文件**
+   - 用记事本打开该文件：
+   ```powershell
+   notepad .gitignore
+   ```
+   - 复制以下内容并保存：
+   ```
+   # Obsidian 工作区和缓存
+   .obsidian/workspace.json
+   .obsidian/workspace-mobile.json
+   .obsidian/cache/
+   
+   # 系统文件
+   .DS_Store
+   Thumbs.db
+   
+   # 日志文件
+   *.log
+   
+   # Smart Connections 索引
+   .smart-connections/
+   smart-connections/
+   embeddings/
+   vector-db/
+   index/
+   
+   # AI 插件缓存
+   copilot-index/
+   ai-cache/
+   ```
+
+6. **创建首次提交（回滚点）**[^3]
+   ```powershell
+   git add .
+   git commit -m "chore: initial vault snapshot before plugin config"
+   ```
+
+**验证成功标志：**
+```powershell
+git status
+```
+应显示 "nothing to commit, working tree clean"
+
+---
+
+### ⚙️ 任务 2：配置 Obsidian Git 自动提交 30 分钟
+
+**操作步骤：**
+
+1. **打开 Obsidian 设置**
+   - 点击左下角齿轮图标 ⚙️
+   - 或按 `Ctrl + ,`
+
+2. **找到 Obsidian Git 插件**[^4]
+   - 左侧菜单滚动到 "Community plugins"
+   - 点击 **Obsidian Git**
+
+3. **配置自动备份**
+   在 **"Backup"** 部分设置：
+   
+   | 设置项 | 值 |
+   |--------|-----|
+   | **Vault backup interval** | `30` |
+   | **Auto pull interval** | `0`（关闭）|
+   | **Commit message** | `vault backup: {{date}}` |
+   | **Auto backup after file change** | ❌ 关闭 |
+
+4. **关闭设置窗口**（自动保存）
+
+**验证方式：**
+等待 30 分钟后，在 PowerShell 运行：
+```powershell
+git log
+```
+应看到 "vault backup: 2026-02-01" 类似提交记录[^5]
+
+---
+
+### 🔍 任务 3：配置 Smart Connections 索引范围
+
+**操作步骤：**
+
+1. **打开 Obsidian 设置** → 找到 **Smart Connections**
+
+2. **设置排除目录**[^6]
+   在 **"Exclude folders"** 中添加：
+   - `_ai_workbench/`
+   - `.obsidian/`
+   - `attachments/`（如果你有附件文件夹）
+   - `templates/`
+   - `archive/`
+
+3. **设置纳入索引的目录**
+   如果插件有 **"Include folders"** 选项，添加：
+   - `项目笔记/`
+   - `学习笔记/`
+   - `工作日志/`
+
+4. **调整结果设置**[^7]
+   
+   | 设置项 | 推荐值 |
+   |--------|--------|
+   | **Connections results type** | **Sources** |
+   | **Lookup results type** | **Blocks** |
+   | **Results limit** | **20** |
+
+5. **重建索引**
+   - 找到 **"Rebuild Index"** 按钮（设置页底部）
+   - 点击后等待 3-10 分钟（建议在休息时执行，可能卡顿）
+
+**验证方式：**
+打开一篇核心笔记，查看右侧 Smart Connections 面板，确认推荐结果不包含 `_ai_workbench/` 中的笔记[^8]
+
+---
+
+## 🎓 值得你学习的 Git 操作（5 分钟速成）
+
+**最常用的 5 个命令：**[^9]
+
+```powershell
+# 查看当前状态（哪些文件被修改）
+git status
+
+# 查看提交历史（查看回滚点）
+git log --oneline
+
+# 撤销最近一次提交（保留文件修改）
+git reset --soft HEAD~1
+
+# 强制回滚到某个提交点（危险！会丢失修改）
+git reset --hard <commit-id>
+
+# 查看某个文件的修改历史
+git log -p 文件名
+```
+
+**学习资源：**
+- 交互式教程：https://learngitbranching.js.org/?locale=zh_CN
+- 速查表：https://training.github.com/downloads/zh_CN/github-git-cheat-sheet/
+
+---
+
+## ⚠️ 常见问题快速处理
+
+### Q1：Smart Connections 重建索引卡住了
+**解决方法：**[^10]
+1. 关闭 Obsidian
+2. 删除 `D:\obsidian\Eenlish learning\.obsidian\plugins\smart-connections\data.json`
+3. 重新打开 Obsidian，重建索引
+
+### Q2：Obsidian Git 显示"无法提交"
+**解决方法：**[^11]
+```powershell
+git status  # 查看问题文件
+git add .   # 暂存所有更改
+git commit -m "fix: resolve conflicts"
+```
+
+### Q3：如何撤销错误的配置？
+运行以下命令回滚到初始状态：
+```powershell
+git log --oneline  # 找到"initial vault snapshot"的 commit ID
+git reset --hard <commit-id>
+```
+
+---
+
+## ✅ 完成检查清单
+
+完成以下 3 项后，回复我"已完成"，我将帮你进行最终验证：
+
+- [ ] Git 仓库已初始化（任务 1，约 5 分钟）
+- [ ] Obsidian Git 自动提交已设置为 30 分钟（任务 2，约 3 分钟）
+- [ ] Smart Connections 排除目录已配置并重建索引（任务 3，约 8 分钟）
+
+**总耗时：约 15-20 分钟**
+
+---
+
+#### Sources
+[^1]: [[obsidian_plugins_plan.md]]
+[^2]: [[obsidian_plugins_plan.md]]
+[^3]: [[obsidian_plugins_plan.md]]
+[^4]: [[obsidian_plugins_plan.md]]
+[^5]: [[obsidian_plugins_plan.md]]
+[^6]: [[obsidian_plugins_plan.md]]
+[^7]: [[obsidian_plugins_plan.md]]
+[^8]: [[obsidian_plugins_plan.md]]
+[^9]: [[obsidian_plugins_plan.md]]
+[^10]: [[obsidian_plugins_plan.md]]
+[^11]: [[obsidian_plugins_plan.md]]
+[Timestamp: 2026/02/01 15:01:31]

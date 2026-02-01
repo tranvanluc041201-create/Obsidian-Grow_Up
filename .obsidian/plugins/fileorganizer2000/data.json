@@ -1,5 +1,5 @@
 {
-  "API_KEY": "",
+  "API_KEY": "FsXrUonab7N1LhEhuNKVXZ",
   "isLicenseValid": false,
   "useLogs": true,
   "defaultDestinationPath": "_NoteCompanion/Processed",
@@ -24,8 +24,8 @@
     ""
   ],
   "stagingFolder": ".notecompanion/staging",
-  "enableSelfHosting": false,
-  "selfHostingURL": "http://localhost:3010",
+  "enableSelfHosting": true,
+  "selfHostingURL": "https://models.github.ai",
   "useFolderEmbeddings": false,
   "useVaultTitles": true,
   "enableSearchGrounding": false,

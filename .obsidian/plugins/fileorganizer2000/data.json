@@ -48,5 +48,9 @@
   "hasRunOnboarding": false,
   "pdfPageLimit": 10,
   "enableProcessingNotifications": true,
-  "showSyncTab": false
+  "showSyncTab": false,
+  "enableScreenpipe": false,
+  "screenpipeApiUrl": "http://localhost:3030",
+  "screenpipeTimeRange": 2,
+  "queryScreenpipeLimit": 10
 }

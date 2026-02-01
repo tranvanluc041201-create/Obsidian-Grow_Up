@@ -18,6 +18,10 @@
     vector-db/
     index/
     
-    # 其他 AI 插件缓存
-    copilot-index/
-    ai-cache/
+# 其他 AI 插件缓存
+copilot-index/
+ai-cache/
+
+# 包含敏感信息的插件配置
+.obsidian/plugins/copilot/data.json
+.obsidian/plugins/copilot/keys.json

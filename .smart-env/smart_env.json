@@ -14,7 +14,7 @@
     },
     "excluded_headings": "",
     "file_exclusions": "Untitled",
-    "folder_exclusions": ""
+    "folder_exclusions": "_ai_workbench,99_Templates,_NoteCompanion/Templates,_NoteCompanion/Processed/Attachments"
   },
   "language": "en",
   "re_import_wait_time": 13,

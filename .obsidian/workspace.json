@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 298.5
   },
   "right": {
     "id": "4d6af7977c3c4e09",
@@ -211,8 +210,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 350.5,
-    "collapsed": true
+    "width": 350.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -231,8 +229,11 @@
       "smart-connections:Smart Connections: Open random connection": false
     }
   },
-  "active": "14861afa5f8fee58",
+  "active": "4338e826b0bc929d",
   "lastOpenFiles": [
+    "OpenClaw/{00_inbox,10_tasks,20_sessions,90_templates}",
+    "OpenClaw",
+    "Untitled",
     "_ai_workbench/obsidian_plugins_plan.md.md",
     "copilot/copilot-conversations/📌_Copilot_任务书：Obsidian_插件配置落地（Smart_Connections_+_Git_+_@20260201_095237.md",
     "copilot/copilot-conversations/你好@20260125_231346.md",
@@ -265,9 +266,6 @@
     "_NoteCompanion/Templates",
     "_NoteCompanion/Logs",
     "_NoteCompanion/Processed/Attachments",
-    "_NoteCompanion/Processed",
-    "_NoteCompanion/Inbox",
-    "EE_Knowledge_Base/Gemini_English_Log.md",
-    "Gemini_English_Log.md"
+    "EE_Knowledge_Base/Gemini_English_Log.md"
   ]
 }

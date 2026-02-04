@@ -1,0 +1,55 @@
+{
+  "fc2fb8a67749": {
+    "id": "fc2fb8a67749",
+    "tags": [],
+    "formatted": false,
+    "logs": {
+      "Cleaning up file...": {
+        "timestamp": "2026-02-02 10:27:54",
+        "completed": true,
+        "skipped": false
+      },
+      "Validating document...": {
+        "timestamp": "2026-02-02 10:27:54",
+        "completed": true,
+        "skipped": false
+      },
+      "Creating document container...": {
+        "timestamp": "2026-02-02 10:27:54",
+        "completed": true,
+        "skipped": false
+      },
+      "Moving attachments...": {
+        "timestamp": "2026-02-02 10:27:54",
+        "completed": true,
+        "skipped": false
+      },
+      "Extracting content...": {
+        "timestamp": "2026-02-02 10:27:54",
+        "completed": true,
+        "skipped": false
+      },
+      "Analyzing document type...": {
+        "timestamp": "2026-02-02 10:27:54",
+        "completed": false,
+        "skipped": true
+      },
+      "Moving to final location...": {
+        "timestamp": "2026-02-02 10:27:54",
+        "completed": false,
+        "skipped": false
+      },
+      "Failed to move file": {
+        "timestamp": "2026-02-02 10:27:56",
+        "completed": false,
+        "error": {
+          "message": "Failed to fetch",
+          "stack": "TypeError: Failed to fetch\n    at FileOrganizer.recommendFolders (plugin:fileorganizer2000:169555:28)\n    at recommendFolderStep (plugin:fileorganizer2000:114214:40)\n    at executeStep (plugin:fileorganizer2000:114637:26)\n    at _Inbox.processInboxFile (plugin:fileorganizer2000:114100:13)\n    at async Object.onProcess (plugin:fileorganizer2000:113976:11)\n    at async Queue.processNext (plugin:fileorganizer2000:113229:7)",
+          "action": "Failed to move file"
+        }
+      }
+    },
+    "status": "error",
+    "originalName": "Full_Mistakes"
+  }
+}

@@ -4,24 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "017fec021745d139",
+        "id": "5bc17a532667c29c",
         "type": "tabs",
         "children": [
           {
-            "id": "14861afa5f8fee58",
+            "id": "e428b61ed840d984",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_ai_workbench/obsidian_plugins_plan.md.md",
+                "file": "Study/English/Word.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "obsidian_plugins_plan.md"
+              "title": "Word"
+            }
+          },
+          {
+            "id": "725586689181b624",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "20_Labs/PSIM/SITO-3out-Buck-闭环复现-复盘.md.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "SITO-3out-Buck-闭环复现-复盘.md"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -78,7 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 298.5
+    "width": 200
   },
   "right": {
     "id": "4d6af7977c3c4e09",
@@ -94,31 +109,16 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Welcome.md",
-                "collapseAll": false,
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
-                "backlinkCollapsed": false,
+                "backlinkCollapsed": true,
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Welcome"
-            }
-          },
-          {
-            "id": "d4d972a94b058e45",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "Welcome.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-going-out",
-              "title": "Outgoing links from Welcome"
+              "title": "Backlinks"
             }
           },
           {
@@ -156,43 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_ai_workbench/obsidian_plugins_plan.md.md",
+                "file": "20_Labs/PSIM/SITO-3out-Buck-闭环复现-复盘.md.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of obsidian_plugins_plan.md"
-            }
-          },
-          {
-            "id": "8d91039322ccdbdd",
-            "type": "leaf",
-            "state": {
-              "type": "fo2k.assistant.sidebar2",
-              "state": {},
-              "icon": "sparkle",
-              "title": "Note Companion"
-            }
-          },
-          {
-            "id": "cec0649bcda524d6",
-            "type": "leaf",
-            "state": {
-              "type": "smart-connections-view",
-              "state": {},
-              "icon": "smart-connections",
-              "title": "Connections"
-            }
-          },
-          {
-            "id": "6fe150987b48978d",
-            "type": "leaf",
-            "state": {
-              "type": "smart-lookup-view",
-              "state": {},
-              "icon": "smart-lookup",
-              "title": "Lookup"
+              "title": "Outline of SITO-3out-Buck-闭环复现-复盘.md"
             }
           },
           {
@@ -204,16 +174,34 @@
               "icon": "message-square",
               "title": "Copilot"
             }
+          },
+          {
+            "id": "d4d972a94b058e45",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
           }
         ],
-        "currentTab": 8
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 350.5
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
+      "smart-connections:Smart Connections: Open connections view": false,
+      "smart-connections:Smart Lookup: Open lookup view": false,
+      "smart-connections:Smart Connections: Open random connection": false,
+      "fileorganizer2000:Note Companion": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -222,23 +210,45 @@
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
       "obsidian-git:Open Git source control": false,
-      "fileorganizer2000:Note Companion": false,
       "copilot:Open Copilot Chat": false,
-      "smart-connections:Smart Connections: Open connections view": false,
-      "smart-connections:Smart Lookup: Open lookup view": false,
-      "smart-connections:Smart Connections: Open random connection": false
+      "markdown-importer:Open format converter": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "remotely-save:Remotely Save": false
     }
   },
-  "active": "4338e826b0bc929d",
+  "active": "725586689181b624",
   "lastOpenFiles": [
-    "OpenClaw/{00_inbox,10_tasks,20_sessions,90_templates}",
-    "OpenClaw",
-    "Untitled",
-    "_ai_workbench/obsidian_plugins_plan.md.md",
-    "copilot/copilot-conversations/📌_Copilot_任务书：Obsidian_插件配置落地（Smart_Connections_+_Git_+_@20260201_095237.md",
-    "copilot/copilot-conversations/你好@20260125_231346.md",
-    "copilot/copilot-conversations/👋@20260125_215005.md",
+    "Study/English/Word.md",
+    "20_Labs/PSIM/SITO-3out-Buck-闭环复现-复盘.md.md",
+    "20_Labs/PSIM/📋 三分钟排错剧本.md",
+    "_ai_workbench/2026-02-04-完整.md",
+    "_ai_workbench/2026-02-04.md",
+    "_ai_workbench/2026-02-04-b站.md",
+    "_ai_workbench/2026-02-03.md",
+    "单电感三输出闭环仿真实验 1 (backup)1.psimsch",
+    "Pasted image 20260204143126.png",
+    "Pasted image 20260204140924.png",
+    "Pasted image 20260204140905.png",
+    "单电感三输出闭环仿真实验 1.smv",
+    "单电感三输出闭环仿真实验 1.psimsch",
+    "单电感三输出闭环仿真实验.psimsch",
+    "Pasted image 20260204113817.png",
+    "Study/English/Complex Sentence.md",
+    "_ai_workbench/useful_resources.md",
+    "_ai_workbench/source_quality_control-ai read.md",
+    "_ai_workbench/02-02_news.md",
+    "12b3d8c74d979c37553f7ea0f3858f40.png",
+    "Pasted image 20260203091119.png",
+    "copilot/copilot-conversations/帮我排版处理一下这个实验复盘笔记,要求内容重复的删去,排@20260203_234159.md",
+    "20_Labs/PSIM",
+    "20_Labs/Untitled.md",
+    "Study/cs50-week4-memory-notes/05-malloc-free.md",
+    "copilot/copilot-conversations/从我的笔记里找_use-after-free_的定义，并引用来源@20260203_165521.md",
+    "Study/cs50-week4-memory-notes/04-strings.md",
+    "Recordings/Cache.md",
+    "copilot/copilot-conversations/请引用并总结_malloc-free_这篇笔记的要点。@20260203_154211.md",
     "copilot/copilot-conversations",
+    "_ai_workbench/obsidian_plugins_plan.md.md",
     "copilot/copilot-custom-prompts/Clip Web Page.md",
     "copilot/copilot-custom-prompts/Clip YouTube Transcript.md",
     "copilot/copilot-custom-prompts/Rewrite as tweet thread.md",
@@ -246,26 +256,12 @@
     "copilot/copilot-custom-prompts/Remove URLs.md",
     "copilot/copilot-custom-prompts/Generate glossary.md",
     "copilot/copilot-custom-prompts/Generate table of contents.md",
-    "copilot/copilot-custom-prompts/Make longer.md",
-    "copilot/copilot-custom-prompts/Make shorter.md",
-    "copilot/copilot-custom-prompts/Emojify.md",
-    "copilot/copilot-custom-prompts/Explain like I am 5.md",
-    "copilot/copilot-custom-prompts/Simplify.md",
-    "copilot/copilot-custom-prompts/Summarize.md",
-    "copilot/copilot-custom-prompts/Translate to Chinese.md",
-    "copilot/copilot-custom-prompts/Fix grammar and spelling.md",
     "copilot/copilot-custom-prompts",
     "copilot",
-    "_NoteCompanion/Templates/flash_cards.md",
-    "_NoteCompanion/Templates/enhance.md",
-    "_NoteCompanion/Templates/youtube_video.md",
-    "_NoteCompanion/Templates/research_paper.md",
-    "_NoteCompanion/Templates/meeting_note.md",
-    "Recordings",
-    "_NoteCompanion/Backups",
-    "_NoteCompanion/Templates",
-    "_NoteCompanion/Logs",
-    "_NoteCompanion/Processed/Attachments",
-    "EE_Knowledge_Base/Gemini_English_Log.md"
+    "Study/English/ENGLISH WORD1.html",
+    "Study/ENGLISH WORD1.html",
+    "Study/错题本/07_好思路与技巧/2026-01-12-10-12-11.png",
+    "Study/错题本/07_好思路与技巧/2026-01-12-10-28-50.png",
+    "Study/错题本/07_好思路与技巧/2026-01-12-10-32-00.png"
   ]
 }

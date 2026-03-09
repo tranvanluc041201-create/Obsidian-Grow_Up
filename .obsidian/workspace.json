@@ -4,39 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "5bc17a532667c29c",
+        "id": "61faf5203054cc90",
         "type": "tabs",
         "children": [
           {
-            "id": "e428b61ed840d984",
+            "id": "ac0e67047b1e3065",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Study/English/Word.md",
+                "file": "20_心理/每日反思/2026-03-08.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Word"
-            }
-          },
-          {
-            "id": "725586689181b624",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "20_Labs/PSIM/SITO-3out-Buck-闭环复现-复盘.md.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "SITO-3out-Buck-闭环复现-复盘.md"
+              "title": "2026-03-08"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -93,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 244.5
   },
   "right": {
     "id": "4d6af7977c3c4e09",
@@ -103,39 +88,6 @@
         "id": "0c7e020718448c05",
         "type": "tabs",
         "children": [
-          {
-            "id": "f138098a335f567f",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "collapseAll": true,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": true,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-coming-in",
-              "title": "Backlinks"
-            }
-          },
-          {
-            "id": "ca30433bfa839fbf",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-tags",
-              "title": "Tags"
-            }
-          },
           {
             "id": "8f620eee0c847f06",
             "type": "leaf",
@@ -156,112 +108,185 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "20_Labs/PSIM/SITO-3out-Buck-闭环复现-复盘.md.md",
+                "file": "Study/experience.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of SITO-3out-Buck-闭环复现-复盘.md"
+              "title": "Outline of experience"
             }
           },
           {
-            "id": "4338e826b0bc929d",
+            "id": "740c9c2a591bfac0",
             "type": "leaf",
             "state": {
-              "type": "copilot-chat-view",
+              "type": "calendar",
               "state": {},
-              "icon": "message-square",
-              "title": "Copilot"
+              "icon": "lucide-ghost",
+              "title": "calendar"
             }
           },
           {
-            "id": "d4d972a94b058e45",
+            "id": "f6aa2145aec25368",
+            "type": "leaf",
+            "state": {
+              "type": "reminder-list",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "reminder-list"
+            }
+          },
+          {
+            "id": "5bf10a407a250992",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Recordings/Cache.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Cache"
+            }
+          },
+          {
+            "id": "b8ebbacfbb163d07",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Recordings/Cache.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from Cache"
+            }
+          },
+          {
+            "id": "1e7a656a086fb9c1",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "f4a46974d67f285f",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "review-queue-list-view"
+            }
+          },
+          {
+            "id": "5a28fad874be8a31",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {},
+              "icon": "SpacedRepIcon",
+              "title": "Notes Review Queue"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 8
       }
     ],
     "direction": "horizontal",
-    "width": 200,
+    "width": 330.5,
     "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
-      "smart-connections:Smart Connections: Open connections view": false,
-      "smart-connections:Smart Lookup: Open lookup view": false,
-      "smart-connections:Smart Connections: Open random connection": false,
-      "fileorganizer2000:Note Companion": false,
       "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
+      "graph:Open graph view": true,
+      "canvas:Create new canvas": true,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
-      "obsidian-git:Open Git source control": false,
-      "copilot:Open Copilot Chat": false,
       "markdown-importer:Open format converter": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "remotely-save:Remotely Save": false
+      "copilot:Open Copilot Chat": false,
+      "obsidian-git:Open Git source control": false,
+      "fileorganizer2000:Note Companion": false,
+      "periodic-notes:Open today": false,
+      "remotely-save:Remotely Save": false,
+      "smart-connections:Smart Connections: Open connections view": false,
+      "smart-connections:Smart Lookup: Open lookup view": false,
+      "smart-connections:Smart Connections: Open random connection": false,
+      "obsidian-spaced-repetition:Review flashcards": false,
+      "templater-obsidian:Templater": false
     }
   },
-  "active": "725586689181b624",
+  "active": "ac0e67047b1e3065",
   "lastOpenFiles": [
-    "Study/English/Word.md",
-    "20_Labs/PSIM/SITO-3out-Buck-闭环复现-复盘.md.md",
-    "20_Labs/PSIM/📋 三分钟排错剧本.md",
-    "_ai_workbench/2026-02-04-完整.md",
-    "_ai_workbench/2026-02-04.md",
-    "_ai_workbench/2026-02-04-b站.md",
-    "_ai_workbench/2026-02-03.md",
-    "单电感三输出闭环仿真实验 1 (backup)1.psimsch",
-    "Pasted image 20260204143126.png",
-    "Pasted image 20260204140924.png",
-    "Pasted image 20260204140905.png",
-    "单电感三输出闭环仿真实验 1.smv",
-    "单电感三输出闭环仿真实验 1.psimsch",
-    "单电感三输出闭环仿真实验.psimsch",
-    "Pasted image 20260204113817.png",
-    "Study/English/Complex Sentence.md",
-    "_ai_workbench/useful_resources.md",
-    "_ai_workbench/source_quality_control-ai read.md",
-    "_ai_workbench/02-02_news.md",
-    "12b3d8c74d979c37553f7ea0f3858f40.png",
-    "Pasted image 20260203091119.png",
-    "copilot/copilot-conversations/帮我排版处理一下这个实验复盘笔记,要求内容重复的删去,排@20260203_234159.md",
-    "20_Labs/PSIM",
-    "20_Labs/Untitled.md",
-    "Study/cs50-week4-memory-notes/05-malloc-free.md",
-    "copilot/copilot-conversations/从我的笔记里找_use-after-free_的定义，并引用来源@20260203_165521.md",
-    "Study/cs50-week4-memory-notes/04-strings.md",
-    "Recordings/Cache.md",
-    "copilot/copilot-conversations/请引用并总结_malloc-free_这篇笔记的要点。@20260203_154211.md",
-    "copilot/copilot-conversations",
-    "_ai_workbench/obsidian_plugins_plan.md.md",
-    "copilot/copilot-custom-prompts/Clip Web Page.md",
-    "copilot/copilot-custom-prompts/Clip YouTube Transcript.md",
-    "copilot/copilot-custom-prompts/Rewrite as tweet thread.md",
-    "copilot/copilot-custom-prompts/Rewrite as tweet.md",
-    "copilot/copilot-custom-prompts/Remove URLs.md",
-    "copilot/copilot-custom-prompts/Generate glossary.md",
-    "copilot/copilot-custom-prompts/Generate table of contents.md",
-    "copilot/copilot-custom-prompts",
-    "copilot",
-    "Study/English/ENGLISH WORD1.html",
-    "Study/ENGLISH WORD1.html",
-    "Study/错题本/07_好思路与技巧/2026-01-12-10-12-11.png",
-    "Study/错题本/07_好思路与技巧/2026-01-12-10-28-50.png",
-    "Study/错题本/07_好思路与技巧/2026-01-12-10-32-00.png"
+    "20_心理/关系变冷时的30秒速查卡.md",
+    "20_心理/关系变冷时的过度自责应对手册.md",
+    "20_心理/心理急救手册.md",
+    "20_心理/情绪追踪.md",
+    "20_心理/每日反思/2026-03-08.md",
+    "10_数学/01_高等数学/概念/微积分/P61-微分方程的基本概念.md",
+    "10_编程/思维导图/NCRE-跨图串联记忆图.md",
+    "10_编程/笔记/cs50-week4-memory-notes/16-memory-alignment.md",
+    "10_编程/笔记/cs50-week4-memory-notes/15-sizeof-special.md",
+    "10_编程/笔记/cs50-week4-memory-notes/13-struct-value-copy.md",
+    "10_编程/笔记/cs50-week4-memory-notes/09-file-functions.md",
+    "10_数学/01_高等数学/概念/微积分/ODE/齐次方程.md",
+    "99_Templates/通用/戒色日记录模板.md",
+    "10_数学/01_高等数学/概念/微积分/ODE/可分离变量的微分方程.md",
+    "10_数学/01_高等数学/概念/微积分/ODE/微分方程基本概念.md",
+    "10_编程/思维导图/NCRE-输入输出与文件记忆图.md",
+    "20_心理/戒色重建系统/每周复盘/2026-W11.md",
+    "20_心理/戒色重建系统/每日记录/2026-03-09.md",
+    "20_心理/戒色重建系统/03_每日记录模板.md",
+    "20_心理/戒色重建系统/02_冲动急救卡.md",
+    "20_心理/戒色重建系统/01_14天重置计划.md",
+    "20_心理/戒色重建系统/00_开始这里.md",
+    "20_心理/戒色重建系统/每周复盘",
+    "20_心理/戒色重建系统/每日记录",
+    "20_心理/戒色重建系统",
+    "10_编程/思维导图/NCRE-结构体联合typedef与链表记忆图.md",
+    "10_编程/思维导图/NCRE-程序结构与流程控制记忆图.md",
+    "10_编程/思维导图/NCRE-位运算记忆图.md",
+    "10_编程/思维导图/NCRE-指针与数组记忆图.md",
+    "10_编程/思维导图/C语言知识概念图.canvas",
+    "10_数学/01_高等数学/方法/微积分/ODE",
+    "10_数学/01_高等数学/方法/微积分",
+    "10_编程/思维导图/NCRE二级C考试概念图.canvas",
+    "10_电气/PSIM/SITO-单电感三输出Buck/Simulink迁移/inspect_sito_model.m",
+    "pywinauto-mcp-stdio-debug.log",
+    "10_编程/元信息/NCRE二级C",
+    "10_编程/思维导图/C语言知识骨架.canvas",
+    "pywinauto-mcp.log",
+    "10_编程/错题本/旧版归档/05_Data_Representation",
+    "Friend_Thesis_CFP_Printing/缓冲区/page1_temp.png",
+    "recovery_tmp/cleanup_deleted_backup_20260306_round3_nontemplate/obsidian/Vault/10_学习/错题本/07_好思路与技巧/2026-01-12-10-32-00.png",
+    "recovery_tmp/cleanup_deleted_backup_20260306_round3_nontemplate/obsidian/Vault/10_学习/错题本/07_好思路与技巧/2026-01-12-10-28-50.png",
+    "recovery_tmp/cleanup_deleted_backup_20260306_round3_nontemplate/obsidian/Vault/10_学习/错题本/07_好思路与技巧/2026-01-12-10-12-11.png",
+    "10_学习/错题本/07_好思路与技巧/2026-01-12-10-32-00.png",
+    "10_学习/错题本/07_好思路与技巧/2026-01-12-10-28-50.png",
+    "10_学习/错题本/07_好思路与技巧/2026-01-12-10-12-11.png",
+    "recovery_tmp/recycle_dir_snap_20260305/从回收站恢复__3420261056/错题本/07_好思路与技巧/2026-01-12-10-32-00.png",
+    "recovery_tmp/recycle_dir_snap_20260305/从回收站恢复__3420261056/错题本/07_好思路与技巧/2026-01-12-10-28-50.png",
+    "recovery_tmp/recycle_dir_snap_20260305/从回收站恢复__3420261056/错题本/07_好思路与技巧/2026-01-12-10-12-11.png",
+    "10_编程/思维导图/C语言知识体系.canvas"
   ]
 }

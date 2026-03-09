@@ -1,0 +1,19 @@
+{
+  "daily": {
+    "enabled": true,
+    "openOnStartup": false,
+    "folder": "20_心理/每日反思",
+    "template": "99_Templates/通用/每日反思模板",
+    "filenameFormat": "YYYY-MM-DD"
+  },
+  "weekly": {
+    "enabled": true,
+    "openOnStartup": false,
+    "folder": "10_Math/90_Dashboards",
+    "template": "99_Templates/math_weekly_review",
+    "filenameFormat": "gggg-[W]WW"
+  },
+  "monthly": {
+    "enabled": false
+  }
+}

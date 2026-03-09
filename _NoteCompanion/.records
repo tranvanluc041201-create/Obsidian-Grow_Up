@@ -1,46 +1,46 @@
 {
-  "fc2fb8a67749": {
-    "id": "fc2fb8a67749",
+  "f88165078300": {
+    "id": "f88165078300",
     "tags": [],
     "formatted": false,
     "logs": {
       "Cleaning up file...": {
-        "timestamp": "2026-02-02 10:27:54",
+        "timestamp": "2026-03-02 08:32:49",
         "completed": true,
         "skipped": false
       },
       "Validating document...": {
-        "timestamp": "2026-02-02 10:27:54",
+        "timestamp": "2026-03-02 08:32:49",
         "completed": true,
         "skipped": false
       },
       "Creating document container...": {
-        "timestamp": "2026-02-02 10:27:54",
+        "timestamp": "2026-03-02 08:32:49",
         "completed": true,
         "skipped": false
       },
       "Moving attachments...": {
-        "timestamp": "2026-02-02 10:27:54",
+        "timestamp": "2026-03-02 08:32:49",
         "completed": true,
         "skipped": false
       },
       "Extracting content...": {
-        "timestamp": "2026-02-02 10:27:54",
+        "timestamp": "2026-03-02 08:32:49",
         "completed": true,
         "skipped": false
       },
       "Analyzing document type...": {
-        "timestamp": "2026-02-02 10:27:54",
+        "timestamp": "2026-03-02 08:32:49",
         "completed": false,
         "skipped": true
       },
       "Moving to final location...": {
-        "timestamp": "2026-02-02 10:27:54",
+        "timestamp": "2026-03-02 08:32:49",
         "completed": false,
         "skipped": false
       },
       "Failed to move file": {
-        "timestamp": "2026-02-02 10:27:56",
+        "timestamp": "2026-03-02 08:32:50",
         "completed": false,
         "error": {
           "message": "Failed to fetch",
@@ -50,6 +50,218 @@
       }
     },
     "status": "error",
-    "originalName": "Full_Mistakes"
+    "originalName": "START_HERE"
+  },
+  "f05c45450b17": {
+    "id": "f05c45450b17",
+    "tags": [],
+    "formatted": false,
+    "logs": {
+      "Cleaning up file...": {
+        "timestamp": "2026-03-02 08:32:49",
+        "completed": true,
+        "skipped": false
+      },
+      "Validating document...": {
+        "timestamp": "2026-03-02 08:32:49",
+        "completed": true,
+        "skipped": false
+      },
+      "Creating document container...": {
+        "timestamp": "2026-03-02 08:32:49",
+        "completed": true,
+        "skipped": false
+      },
+      "Moving attachments...": {
+        "timestamp": "2026-03-02 08:32:49",
+        "completed": true,
+        "skipped": false
+      },
+      "Extracting content...": {
+        "timestamp": "2026-03-02 08:32:49",
+        "completed": true,
+        "skipped": false
+      },
+      "Analyzing document type...": {
+        "timestamp": "2026-03-02 08:32:49",
+        "completed": false,
+        "skipped": true
+      },
+      "Moving to final location...": {
+        "timestamp": "2026-03-02 08:32:49",
+        "completed": false,
+        "skipped": false
+      },
+      "Failed to move file": {
+        "timestamp": "2026-03-02 08:32:50",
+        "completed": false,
+        "error": {
+          "message": "Failed to fetch",
+          "stack": "TypeError: Failed to fetch\n    at FileOrganizer.recommendFolders (plugin:fileorganizer2000:169555:28)\n    at recommendFolderStep (plugin:fileorganizer2000:114214:40)\n    at executeStep (plugin:fileorganizer2000:114637:26)\n    at _Inbox.processInboxFile (plugin:fileorganizer2000:114100:13)\n    at async Object.onProcess (plugin:fileorganizer2000:113976:11)\n    at async Queue.processNext (plugin:fileorganizer2000:113229:7)",
+          "action": "Failed to move file"
+        }
+      }
+    },
+    "status": "error",
+    "originalName": "TECH_FEED_SOURCES"
+  },
+  "3a5ce15b5954": {
+    "id": "3a5ce15b5954",
+    "tags": [],
+    "formatted": false,
+    "logs": {
+      "Cleaning up file...": {
+        "timestamp": "2026-03-02 08:32:49",
+        "completed": true,
+        "skipped": false
+      },
+      "Validating document...": {
+        "timestamp": "2026-03-02 08:32:49",
+        "completed": true,
+        "skipped": false
+      },
+      "Creating document container...": {
+        "timestamp": "2026-03-02 08:32:49",
+        "completed": true,
+        "skipped": false
+      },
+      "Moving attachments...": {
+        "timestamp": "2026-03-02 08:32:49",
+        "completed": true,
+        "skipped": false
+      },
+      "Extracting content...": {
+        "timestamp": "2026-03-02 08:32:49",
+        "completed": true,
+        "skipped": false
+      },
+      "Analyzing document type...": {
+        "timestamp": "2026-03-02 08:32:49",
+        "completed": false,
+        "skipped": true
+      },
+      "Moving to final location...": {
+        "timestamp": "2026-03-02 08:32:49",
+        "completed": false,
+        "skipped": false
+      },
+      "Failed to move file": {
+        "timestamp": "2026-03-02 08:32:50",
+        "completed": false,
+        "error": {
+          "message": "Failed to fetch",
+          "stack": "TypeError: Failed to fetch\n    at FileOrganizer.recommendFolders (plugin:fileorganizer2000:169555:28)\n    at recommendFolderStep (plugin:fileorganizer2000:114214:40)\n    at executeStep (plugin:fileorganizer2000:114637:26)\n    at _Inbox.processInboxFile (plugin:fileorganizer2000:114100:13)\n    at async Object.onProcess (plugin:fileorganizer2000:113976:11)\n    at async Queue.processNext (plugin:fileorganizer2000:113229:7)",
+          "action": "Failed to move file"
+        }
+      }
+    },
+    "status": "error",
+    "originalName": "每周计划表"
+  },
+  "c470176cf049": {
+    "id": "c470176cf049",
+    "tags": [],
+    "formatted": false,
+    "logs": {
+      "Cleaning up file...": {
+        "timestamp": "2026-03-02 08:32:49",
+        "completed": true,
+        "skipped": false
+      },
+      "Validating document...": {
+        "timestamp": "2026-03-02 08:32:49",
+        "completed": true,
+        "skipped": false
+      },
+      "Creating document container...": {
+        "timestamp": "2026-03-02 08:32:49",
+        "completed": true,
+        "skipped": false
+      },
+      "Moving attachments...": {
+        "timestamp": "2026-03-02 08:32:49",
+        "completed": true,
+        "skipped": false
+      },
+      "Extracting content...": {
+        "timestamp": "2026-03-02 08:32:49",
+        "completed": true,
+        "skipped": false
+      },
+      "Analyzing document type...": {
+        "timestamp": "2026-03-02 08:32:49",
+        "completed": false,
+        "skipped": true
+      },
+      "Moving to final location...": {
+        "timestamp": "2026-03-02 08:32:49",
+        "completed": false,
+        "skipped": false
+      },
+      "Failed to move file": {
+        "timestamp": "2026-03-02 08:32:50",
+        "completed": false,
+        "error": {
+          "message": "Failed to fetch",
+          "stack": "TypeError: Failed to fetch\n    at FileOrganizer.recommendFolders (plugin:fileorganizer2000:169555:28)\n    at recommendFolderStep (plugin:fileorganizer2000:114214:40)\n    at executeStep (plugin:fileorganizer2000:114637:26)\n    at _Inbox.processInboxFile (plugin:fileorganizer2000:114100:13)\n    at async Object.onProcess (plugin:fileorganizer2000:113976:11)\n    at async Queue.processNext (plugin:fileorganizer2000:113229:7)",
+          "action": "Failed to move file"
+        }
+      }
+    },
+    "status": "error",
+    "originalName": "自动生成规则说明"
+  },
+  "40e6580787cd": {
+    "id": "40e6580787cd",
+    "tags": [],
+    "formatted": false,
+    "logs": {
+      "Cleaning up file...": {
+        "timestamp": "2026-03-02 08:32:49",
+        "completed": true,
+        "skipped": false
+      },
+      "Validating document...": {
+        "timestamp": "2026-03-02 08:32:49",
+        "completed": true,
+        "skipped": false
+      },
+      "Creating document container...": {
+        "timestamp": "2026-03-02 08:32:49",
+        "completed": true,
+        "skipped": false
+      },
+      "Moving attachments...": {
+        "timestamp": "2026-03-02 08:32:49",
+        "completed": true,
+        "skipped": false
+      },
+      "Extracting content...": {
+        "timestamp": "2026-03-02 08:32:49",
+        "completed": true,
+        "skipped": false
+      },
+      "Analyzing document type...": {
+        "timestamp": "2026-03-02 08:32:49",
+        "completed": false,
+        "skipped": true
+      },
+      "Moving to final location...": {
+        "timestamp": "2026-03-02 08:32:49",
+        "completed": false,
+        "skipped": false
+      },
+      "Failed to move file": {
+        "timestamp": "2026-03-02 08:32:50",
+        "completed": false,
+        "error": {
+          "message": "Failed to fetch",
+          "stack": "TypeError: Failed to fetch\n    at FileOrganizer.recommendFolders (plugin:fileorganizer2000:169555:28)\n    at recommendFolderStep (plugin:fileorganizer2000:114214:40)\n    at executeStep (plugin:fileorganizer2000:114637:26)\n    at _Inbox.processInboxFile (plugin:fileorganizer2000:114100:13)\n    at async Object.onProcess (plugin:fileorganizer2000:113976:11)\n    at async Queue.processNext (plugin:fileorganizer2000:113229:7)",
+          "action": "Failed to move file"
+        }
+      }
+    },
+    "status": "error",
+    "originalName": "资料整理检查清单"
   }
 }

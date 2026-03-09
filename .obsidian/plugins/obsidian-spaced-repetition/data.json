@@ -1,0 +1,30 @@
+{
+  "settings": {
+    "tags": [],
+    "flashcardTags": [
+      "#数学",
+      "#高数",
+      "#概率论"
+    ],
+    "convertFoldersToDecks": false,
+    "deckFolder": "10_Math",
+    "burySiblingCards": false,
+    "showContextInCards": true,
+    "flashcardHeightPercentage": 80,
+    "flashcardWidthPercentage": 80,
+    "randomizeCardOrder": true,
+    "flashcardEasyText": "Easy (4)",
+    "flashcardGoodText": "Good (3)",
+    "flashcardHardText": "Hard (2)",
+    "flashcardAgainText": "Again (1)",
+    "singleLineCardSeparator": "?",
+    "singleLineReversedCardSeparator": "??",
+    "multilineCardSeparator": "<!--SR:",
+    "multilineReversedCardSeparator": "<!--SR-REVERSE:",
+    "editLaterTag": "#edit-later",
+    "enableCommentOnFlashcard": false,
+    "enableFileContext": false,
+    "cardComment": "",
+    "defaultCardType": "SingleLine"
+  }
+}

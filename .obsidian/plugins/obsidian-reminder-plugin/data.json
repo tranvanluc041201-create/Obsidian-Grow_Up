@@ -1,0 +1,375 @@
+{
+  "scanned": true,
+  "reminders": {
+    "recovery_tmp/format_cleanup_backup_20260306/10_学习/错题本/01_Compile_Link/1.2 宏定义运算优先级-v1.1.md": [
+      {
+        "title": "立即复盘（理解正确做法）",
+        "time": "2026-02-19",
+        "rowNumber": 120
+      },
+      {
+        "title": "快速回顾（遮住答案，能否说出坑点）",
+        "time": "2026-02-20",
+        "rowNumber": 121
+      },
+      {
+        "title": "考前速览（只看思维盲区）",
+        "time": "2026-03-06",
+        "rowNumber": 122
+      }
+    ],
+    "recovery_tmp/format_cleanup_backup_20260306/10_学习/错题本/01_Compile_Link/1.7 规定为整数时不能填变量-v1.1.md": [
+      {
+        "title": "立即复盘（理解正确做法）",
+        "time": "2026-02-19",
+        "rowNumber": 100
+      },
+      {
+        "title": "快速回顾（遮住答案，能否说出坑点）",
+        "time": "2026-02-20",
+        "rowNumber": 101
+      },
+      {
+        "title": "考前速览（只看思维盲区）",
+        "time": "2026-03-06",
+        "rowNumber": 102
+      }
+    ],
+    "recovery_tmp/format_cleanup_backup_20260306/10_学习/错题本/01_Compile_Link/函数声明与定义混淆-v1.1.md": [
+      {
+        "title": "立即复盘（理解正确做法）",
+        "time": "2026-02-19",
+        "rowNumber": 123
+      },
+      {
+        "title": "快速回顾（遮住答案，能否说出坑点）",
+        "time": "2026-02-20",
+        "rowNumber": 124
+      },
+      {
+        "title": "考前速览（只看思维盲区）",
+        "time": "2026-03-06",
+        "rowNumber": 125
+      }
+    ],
+    "recovery_tmp/format_cleanup_backup_20260306/10_学习/错题本/02_Memory_Address/2.3 指针自增优先级-v1.1.md": [
+      {
+        "title": "立即复盘（理解正确做法）",
+        "time": "2026-02-19",
+        "rowNumber": 111
+      },
+      {
+        "title": "快速回顾（遮住答案，能否说出坑点）",
+        "time": "2026-02-20",
+        "rowNumber": 112
+      },
+      {
+        "title": "代码复现（手写4种变式）",
+        "time": "2026-02-22",
+        "rowNumber": 113
+      },
+      {
+        "title": "考前速览（只看思维盲区）",
+        "time": "2026-03-06",
+        "rowNumber": 114
+      }
+    ],
+    "recovery_tmp/format_cleanup_backup_20260306/10_学习/错题本/02_Memory_Address/2.6 返回局部变量地址-v1.1.md": [
+      {
+        "title": "立即复盘（理解正确做法）",
+        "time": "2026-02-19",
+        "rowNumber": 160
+      },
+      {
+        "title": "快速回顾（遮住答案，能否说出坑点）",
+        "time": "2026-02-20",
+        "rowNumber": 161
+      },
+      {
+        "title": "代码复现（手写3种正确版本）",
+        "time": "2026-02-22",
+        "rowNumber": 162
+      },
+      {
+        "title": "变式测试（字符串版本）",
+        "time": "2026-02-26",
+        "rowNumber": 163
+      },
+      {
+        "title": "考前速览（只看思维盲区）",
+        "time": "2026-03-06",
+        "rowNumber": 164
+      }
+    ],
+    "recovery_tmp/format_cleanup_backup_20260306/10_学习/错题本/02_Memory_Address/my_strdup实现漏洞-v1.1.md": [
+      {
+        "title": "立即复盘（理解正确做法）",
+        "time": "2026-02-19",
+        "rowNumber": 171
+      },
+      {
+        "title": "快速回顾（遮住答案，能否说出坑点）",
+        "time": "2026-02-20",
+        "rowNumber": 172
+      },
+      {
+        "title": "代码复现（手写安全版本）",
+        "time": "2026-02-22",
+        "rowNumber": 173
+      },
+      {
+        "title": "变式测试（其他资源分配场景）",
+        "time": "2026-02-26",
+        "rowNumber": 174
+      },
+      {
+        "title": "考前速览（只看思维盲区）",
+        "time": "2026-03-06",
+        "rowNumber": 175
+      }
+    ],
+    "recovery_tmp/format_cleanup_backup_20260306/10_学习/错题本/02_Memory_Address/2.8 指针优先级-v1.1.md": [
+      {
+        "title": "立即复盘（理解正确做法）",
+        "time": "2026-02-19",
+        "rowNumber": 130
+      },
+      {
+        "title": "快速回顾（遮住答案，能否说出坑点）",
+        "time": "2026-02-20",
+        "rowNumber": 131
+      },
+      {
+        "title": "代码复现（手写4种变式）",
+        "time": "2026-02-22",
+        "rowNumber": 132
+      },
+      {
+        "title": "变式测试（数组场景）",
+        "time": "2026-02-26",
+        "rowNumber": 133
+      },
+      {
+        "title": "考前速览（只看思维盲区）",
+        "time": "2026-03-06",
+        "rowNumber": 134
+      }
+    ],
+    "recovery_tmp/format_cleanup_backup_20260306/10_学习/错题本/02_Memory_Address/2.7 sizeof 指针的误解.md": [
+      {
+        "title": "立即复盘（理解正确做法）",
+        "time": "2026-02-19",
+        "rowNumber": 150
+      },
+      {
+        "title": "快速回顾（遮住答案，能否说出坑点）",
+        "time": "2026-02-20",
+        "rowNumber": 151
+      },
+      {
+        "title": "代码复现（手写正确版本）",
+        "time": "2026-02-22",
+        "rowNumber": 152
+      },
+      {
+        "title": "考前速览（只看思维盲区）",
+        "time": "2026-03-06",
+        "rowNumber": 153
+      }
+    ],
+    "recovery_tmp/format_cleanup_backup_20260306/10_学习/错题本/03_Logic_Control/3.3 浮点数死循环-v1.1.md": [
+      {
+        "title": "立即复盘（理解正确做法）",
+        "time": "2026-02-19",
+        "rowNumber": 133
+      },
+      {
+        "title": "快速回顾（遮住答案，能否说出坑点）",
+        "time": "2026-02-20",
+        "rowNumber": 134
+      },
+      {
+        "title": "代码复现（手写整数计数版本）",
+        "time": "2026-02-22",
+        "rowNumber": 135
+      },
+      {
+        "title": "变式测试（金钱计算场景）",
+        "time": "2026-02-26",
+        "rowNumber": 136
+      },
+      {
+        "title": "考前速览（只看思维盲区）",
+        "time": "2026-03-06",
+        "rowNumber": 137
+      }
+    ],
+    "recovery_tmp/format_cleanup_backup_20260306/10_学习/错题本/03_Logic_Control/3.4 嵌套printf执行顺序-v1.1.md": [
+      {
+        "title": "立即复盘（理解正确做法）",
+        "time": "2026-02-19",
+        "rowNumber": 122
+      },
+      {
+        "title": "快速回顾（遮住答案，能否说出坑点）",
+        "time": "2026-02-20",
+        "rowNumber": 123
+      },
+      {
+        "title": "代码复现（手写清晰版本）",
+        "time": "2026-02-22",
+        "rowNumber": 124
+      },
+      {
+        "title": "变式测试（其他副作用函数）",
+        "time": "2026-02-26",
+        "rowNumber": 125
+      },
+      {
+        "title": "考前速览（只看思维盲区）",
+        "time": "2026-03-06",
+        "rowNumber": 126
+      }
+    ],
+    "recovery_tmp/format_cleanup_backup_20260306/10_学习/错题本/01_Compile_Link/1.8 动态数组语法-v1.1.md": [
+      {
+        "title": "立即复盘（理解正确做法）",
+        "time": "2026-02-19",
+        "rowNumber": 142
+      },
+      {
+        "title": "快速回顾（遮住答案，能否说出坑点）",
+        "time": "2026-02-20",
+        "rowNumber": 143
+      },
+      {
+        "title": "考前速览（只看思维盲区）",
+        "time": "2026-03-06",
+        "rowNumber": 144
+      }
+    ],
+    "recovery_tmp/format_cleanup_backup_20260306/10_学习/错题本/02_Memory_Address/2.1 二维数组传参-v1.1.md": [
+      {
+        "title": "立即复盘（理解正确做法）",
+        "time": "2026-02-19",
+        "rowNumber": 132
+      },
+      {
+        "title": "快速回顾（遮住答案，能否说出坑点）",
+        "time": "2026-02-20",
+        "rowNumber": 133
+      },
+      {
+        "title": "代码复现（手写正确版本）",
+        "time": "2026-02-22",
+        "rowNumber": 134
+      },
+      {
+        "title": "变式测试（三维数组传参）",
+        "time": "2026-02-26",
+        "rowNumber": 135
+      },
+      {
+        "title": "考前速览（只看思维盲区）",
+        "time": "2026-03-06",
+        "rowNumber": 136
+      }
+    ],
+    "recovery_tmp/format_cleanup_backup_20260306/10_学习/错题本/02_Memory_Address/2.5 字符串初始化越界-v1.1.md": [
+      {
+        "title": "立即复盘（理解正确做法）",
+        "time": "2026-02-19",
+        "rowNumber": 118
+      },
+      {
+        "title": "快速回顾（遮住答案，能否说出坑点）",
+        "time": "2026-02-20",
+        "rowNumber": 119
+      },
+      {
+        "title": "代码复现（手写安全版本）",
+        "time": "2026-02-22",
+        "rowNumber": 120
+      },
+      {
+        "title": "考前速览（只看思维盲区）",
+        "time": "2026-03-06",
+        "rowNumber": 121
+      }
+    ],
+    "recovery_tmp/format_cleanup_backup_20260306/10_学习/错题本/02_Memory_Address/2.7 sizeof指针误解-v1.1.md": [
+      {
+        "title": "立即复盘（理解正确做法）",
+        "time": "2026-02-19",
+        "rowNumber": 148
+      },
+      {
+        "title": "快速回顾（遮住答案，能否说出坑点）",
+        "time": "2026-02-20",
+        "rowNumber": 149
+      },
+      {
+        "title": "代码复现（手写正确版本）",
+        "time": "2026-02-22",
+        "rowNumber": 150
+      },
+      {
+        "title": "考前速览（只看思维盲区）",
+        "time": "2026-03-06",
+        "rowNumber": 151
+      }
+    ],
+    "recovery_tmp/format_cleanup_backup_20260306/10_学习/错题本/04_IO_Buffer/4.1 Scanf 缓冲区残留-v1.1.md": [
+      {
+        "title": "立即复盘（理解正确做法）",
+        "time": "2026-02-19",
+        "rowNumber": 115
+      },
+      {
+        "title": "快速回顾（遮住答案，能否说出坑点）",
+        "time": "2026-02-20",
+        "rowNumber": 116
+      },
+      {
+        "title": "代码复现（手写正确版本）",
+        "time": "2026-02-22",
+        "rowNumber": 117
+      },
+      {
+        "title": "变式测试（字符串后读字符）",
+        "time": "2026-02-26",
+        "rowNumber": 118
+      },
+      {
+        "title": "考前速览（只看思维盲区）",
+        "time": "2026-03-06",
+        "rowNumber": 119
+      }
+    ]
+  },
+  "debug": false,
+  "settings": {
+    "reminderTime": "22:00",
+    "reminderTimeStep": 5,
+    "laters": "In 30 minutes\nIn 1 hour\nIn 3 hours\nTomorrow\nNext week",
+    "useSystemNotification": true,
+    "autoCompleteTrigger": "(@",
+    "primaryReminderFormat": "ReminderPluginReminderFormat",
+    "enableReminderPluginReminderFormat": true,
+    "dateFormat": "YYYY-MM-DD",
+    "dateTimeFormat": "YYYY-MM-DD HH:mm",
+    "strictDateFormat": false,
+    "linkDatesToDailyNotes": false,
+    "enableTasksPluginReminderFormat": true,
+    "useCustomEmojiForTasksPlugin": true,
+    "removeTagsForTasksPlugin": false,
+    "enableKanbanPluginReminderFormat": false,
+    "yearMonthDisplayFormat": "YYYY, MMMM",
+    "monthDayDisplayFormat": "MM/DD",
+    "shortDateWithWeekdayDisplayFormat": "M/DD (ddd)",
+    "timeDisplayFormat": "HH:mm",
+    "editDetectionSec": 10,
+    "reminderCheckIntervalSec": 5,
+    "weekStart": "0"
+  }
+}

@@ -1,0 +1,13 @@
+﻿占位编号,第2章出现行号,作用,建议锁定来源,机构/作者,类型,版本/年份,锁定状态,用于章节,备注
+文献1,"5,7,58",LCA总框架（原则与框架）,ISO 14040:2006 Environmental management — Life cycle assessment — Principles and framework,ISO,标准（国际）,"2006 (Edition 2, Amd 1:2020)",已锁定,"2.1, 2.5, 第3章方法依据",与文献2、3成套引用
+文献2,"5,7,58",LCA执行要求（数据质量、边界、报告）,ISO 14044:2006 Environmental management — Life cycle assessment — Requirements and guidelines,ISO,标准（国际）,2006 (Amd 1:2017; Amd 2:2020),已锁定,"2.1, 2.5, 第3章方法依据",与文献1、3配套
+文献3,"5,7,24,58",产品碳足迹（CFP）主标准与表述边界,ISO 14067:2018 Greenhouse gases — Carbon footprint of products — Requirements and guidelines for quantification,ISO,标准（国际）,2018（现行发布版；WD在研）,已锁定,"2.1, 2.3, 2.5, 第3章方法依据",正文可注：ISO/WD 14067在研，不替代现行版
+文献4,"7,13,17,24",产品层级生命周期温室气体核算框架（GHG Protocol入口/定位）,Product Standard | Greenhouse Gas Protocol（网页）,GHG Protocol (WRI/WBCSD),官网页面/指南入口,网页（检索日期记录）,已锁定,"2.1, 2.2, 2.3",用于“适用对象/应用场景”类表述
+文献5,"7,21,24",产品生命周期核算与报告标准（GHG Protocol PDF正文）,Product Life Cycle Accounting and Reporting Standard (PDF),World Resources Institute; WBCSD,指南/标准（国际组织）,2011,已锁定,"2.1, 2.2, 2.3",用于“不可越界比较宣称/报告边界”类表述
+文献6,"17,19",数字印刷 vs 胶印早期对比案例（工序差异/热点）,"Strecker S; Lesage P. Carbon Footprint and Environmental Impacts of Offset and Digital Printing. NIP & Digital Fabrication Conference (NIP26), 2010, 26(1):315-318.","Strecker, S.; Lesage, P.",会议论文[C],2010,已补全（r02）,2.2,证据页：paperity（可回溯）。若后续能拿到IS&T官方PDF/DOI，替换为官方入口。
+文献7,21,小批量工艺比较与边界讨论（VTT案例）,"Leino M; Pekkanen J; Soukka R. Carbon Footprint and Environmental Impacts of Print Products. VTT Research Notes 2560, 2010.","Leino, M.; Pekkanen, J.; Soukka, R.",技术报告[R],2010,已补全（r02）,2.2,证据PDF：VTT Research Notes 2560（官方PDF可下载）。
+文献8,"40,60",气候变化表征因子/影响评价方法一致性（LCIA层）,LC-IMPACT. LCI — Climate Change (Characterisation factors dataset) [EB/OL]. Accessed 2026-02-24.,LC-IMPACT（项目/机构作者）,在线资源[EB/OL],访问日期2026-02-24,已补全（r02）,"2.4, 2.5","用于“表征因子来源/一致性”说明；若需要学术引用，可换为LC-IMPACT方法论文（JIE, 2020）。"
+文献9,"47,58",中国电力碳足迹因子（CFP口径）公告主依据,关于发布2024年电力碳足迹因子数据的公告（2025年第10号）,生态环境部; 国家统计局; 国家能源局,官方公告,2025-01-22,已锁定,"2.4, 2.5, 第3章因子选择",主线因子口径来源
+文献10,47,电力碳足迹因子适用场景与解释（答记者问）,生态环境部应对气候变化司有关负责人就《关于发布2024年电力碳足迹因子数据的公告》答记者问,生态环境部应对气候变化司,官方解读/答记者问,2025-01-22,已锁定,2.4,用于解释“产品碳足迹/LCA/绿色设计”等适用场景
+文献11,"52,58",全国电力平均CO2排放因子（CO2口径，对照/敏感性）,关于发布2023年全国电力平均二氧化碳排放因子的公告（2024年第17号）,生态环境部; 国家统计局,官方公告,2024-12-27,已锁定,"2.4, 2.5, 第3章敏感性分析口径",与文献9不是同一口径，正文需明确区分
+文献12,64,参考文献著录格式规则,GB/T 7714—2015 信息与文献 参考文献著录规则,国家标准化管理委员会（标准发布体系）,国家标准（格式规范）,2015,暂锁定（按当前稿件写法）,2.6（写作规范说明）,若导师/学院明确改用GB/T 7714-2025，再全篇统一替换

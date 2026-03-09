@@ -1,10 +1,17 @@
 [
-  "obsidian-git",
-  "copilot",
-  "fileorganizer2000",
-  "smart-connections",
   "table-editor-obsidian",
-  "obsidian-style-settings",
+  "calendar",
+  "dataview",
+  "obsidian-git",
   "obsidian-icon-folder",
-  "remotely-save"
+  "obsidian-markmind",
+  "periodic-notes",
+  "quickadd",
+  "obsidian-reminder-plugin",
+  "remotely-save",
+  "smart-connections",
+  "obsidian-spaced-repetition",
+  "templater-obsidian",
+  "obsidian-tasks-plugin",
+  "obsidian-style-settings"
 ]

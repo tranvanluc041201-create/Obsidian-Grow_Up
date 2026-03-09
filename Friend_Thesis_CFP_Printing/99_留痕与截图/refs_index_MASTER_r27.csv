@@ -1,0 +1,21 @@
+﻿编号,URL,应保存文件名,实际保存文件名,状态(OK/FAIL),备注
+1,https://www.iso.org/standard/37456.html,[1]_ISO_20260228.png,refs_evidence_sheets_MASTER_r27.docx(对应页),OK,无PNG→用DOCX举证页；可选本地网页截图增强
+2,https://www.iso.org/standard/38498.html,[2]_ISO_20260228.png,refs_evidence_sheets_MASTER_r27.docx(对应页),OK,无PNG→用DOCX举证页；可选本地网页截图增强
+3,https://www.iso.org/standard/71206.html,[3]_ISO_20260228.png,refs_evidence_sheets_MASTER_r27.docx(对应页),OK,无PNG→用DOCX举证页；可选本地网页截图增强
+4,https://ghgprotocol.org/sites/default/files/standards/Product-Life-Cycle-Accounting-Reporting-Standard_041613.pdf,[4]_ref_20260228.pdf,ref04_p1_20260228.png + refs_evidence_sheets_MASTER_r27.docx(对应页),OK,PDF下载失败→改用PNG截图+DOCX举证页
+5,https://www.mee.gov.cn/xxgk2018/xxgk/xxgk01/202510/t20251024_1130734.html,[5]_MEE_20260228.png,refs_evidence_sheets_MASTER_r27.docx(对应页),OK,无PNG→用DOCX举证页；可选本地网页截图增强
+6,https://www.mee.gov.cn/xxgk2018/xxgk/xxgk01/202512/t20251231_1139517.html,[6]_MEE_20260228.png,refs_evidence_sheets_MASTER_r27.docx(对应页),OK,无PNG→用DOCX举证页；可选本地网页截图增强
+7,https://publications.vtt.fi/pdf/tiedotteet/2010/T2538.pdf,[7]_VTT_20260228.pdf,refs_evidence_sheets_MASTER_r27.docx(对应页),OK,无PNG→用DOCX举证页；可选本地网页截图增强
+8,https://publications.vtt.fi/pdf/tiedotteet/2010/T2560.pdf,[8]_VTT_20260228.pdf,ref08_p1_20260228.png + refs_evidence_sheets_MASTER_r27.docx(对应页),OK,PDF下载失败→改用PNG截图+DOCX举证页
+9,https://library.imaging.org/print4fab/articles/26/1/art00026_1,[9]_ref_20260228.png,ref09_p1_20260228.png + refs_evidence_sheets_MASTER_r27.docx(对应页),OK,PDF下载失败→改用PNG截图+DOCX举证页
+10,https://doi.org/10.1016/j.jclepro.2008.03.006,[10]_ref_20260228.png,refs_evidence_sheets_MASTER_r27.docx(对应页),OK,无PNG→用DOCX举证页；可选本地网页截图增强
+11,https://twosidesna.org/wp-content/uploads/sites/16/2018/05/Printing_and_Writing_Papers_-_Life-Cycle_Assessment_Summary_Report.pdf,[11]_TwoSides_20260228.pdf,ref11_p1_20260228.png + refs_evidence_sheets_MASTER_r27.docx(对应页),OK,PDF下载失败→改用PNG截图+DOCX举证页
+12,https://bioresources.cnr.ncsu.edu/resources/life-cycle-carbon-footprint-analysis-of-pulp-and-paper-grades-in-the-united-states-using-production-line-based-data-and-integration/,[12]_ref_20260228.png,refs_evidence_sheets_MASTER_r27.docx(对应页),OK,无PNG→用DOCX举证页；可选本地网页截图增强
+13,https://urbansustainability.seas.umich.edu/wp-content/uploads/2014/08/2009_Vos-and-Newell_A-Comparative-Analysis-of-Carbon-Dioxide-Emissions-in-Coated-Paper-Production.pdf,[13]_ref_20260228.pdf,ref13_p1_20260228.png + refs_evidence_sheets_MASTER_r27.docx(对应页),OK,PDF下载失败→改用PNG截图+DOCX举证页
+14,https://library.imaging.org/print4fab/articles/26/1/art00025_1,[14]_ref_20260228.png,refs_evidence_sheets_MASTER_r27.docx(对应页),OK,无PNG→用DOCX举证页；可选本地网页截图增强
+15,https://big5.mee.gov.cn/gate/big5/www.mee.gov.cn/xxgk2018/xxgk/xxgk01/202510/W020251024569470952545.pdf,[15]_MEE_20260228.pdf,ref15_p1_20260228.png + refs_evidence_sheets_MASTER_r27.docx(对应页),OK,PDF下载失败→改用PNG截图+DOCX举证页
+16,https://www.mee.gov.cn/xxgk2018/xxgk/xxgk01/202512/W020251231726284332528.pdf,[16]_MEE_20260228.pdf,ref16_p1_20260228.png + refs_evidence_sheets_MASTER_r27.docx(对应页),OK,PDF下载失败→改用PNG截图+DOCX举证页
+17,https://www.iso.org/standard/37456.html,[17]_ISO_20260228.png,refs_evidence_sheets_MASTER_r27.docx(对应页),OK,无PNG→用DOCX举证页；可选本地网页截图增强
+18,https://www.iso.org/standard/38498.html,[18]_ISO_20260228.png,refs_evidence_sheets_MASTER_r27.docx(对应页),OK,无PNG→用DOCX举证页；可选本地网页截图增强
+19,https://www.iso.org/standard/71206.html,[19]_ISO_20260228.png,refs_evidence_sheets_MASTER_r27.docx(对应页),OK,无PNG→用DOCX举证页；可选本地网页截图增强
+20,https://www.iso.org/standard/90578.html,[20]_ISO_20260228.png,refs_evidence_sheets_MASTER_r27.docx(对应页),OK,无PNG→用DOCX举证页；可选本地网页截图增强

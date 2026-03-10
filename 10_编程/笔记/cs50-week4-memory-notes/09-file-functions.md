@@ -82,3 +82,6 @@ fwrite(a, sizeof(int), 4, fp);
 - [[10_编程/笔记/cs50-week4-memory-notes/08-file-io-fopen]]
 - [[10_编程/笔记/cs50-week4-memory-notes/10-file-functions-code-bridge]]
 - [[10_编程/笔记/cs50-week4-memory-notes/11-file-io-practice-archive]]
+- [[10_编程/错题本/04_IO_Buffer/4.1 Scanf 缓冲区残留]]
+- [[10_编程/错题本/04_IO_Buffer/4.2 Scanf遗漏取地址符]]
+- [[10_编程/错题本/04_IO_Buffer/4.3 double输入格式]]

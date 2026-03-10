@@ -73,3 +73,5 @@ if (p != NULL) {
 - [[10_编程/笔记/cs50-week4-memory-notes/02-memory-model]]
 - [[10_编程/笔记/cs50-week4-memory-notes/04-strings]]
 - [[10_编程/错题本/02_Memory_Address/2.4 空指针解引用]]
+- [[10_编程/错题本/01_Compile_Link/Q6 指针定义语法视力测试]]
+- [[10_编程/错题本/02_Memory_Address/2.8 指针优先级]]

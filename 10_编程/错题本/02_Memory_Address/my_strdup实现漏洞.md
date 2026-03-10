@@ -1,5 +1,5 @@
 ﻿---
-title: "my_strdup实现漏洞"
+title: "my_strdup 实现漏洞：NULL 检查与重复 strlen"
 difficulty: L3
 frequency: 首次
 repeated: false
@@ -7,13 +7,13 @@ is_hard: true
 last_review: 2026-02-19
 next_review: 2026-02-20
 tags: [内存指针, malloc, 字符串, 效率, NULL检查]
-related_note: "[[05-malloc-free]]"
+related_note: "[[10_编程/笔记/cs50-week4-memory-notes/05-malloc-free]]"
 type: 编程错题
 language: C
 module: 内存地址
 created: 2026-02-19
 ---
-# my_strdup实现漏洞
+# my_strdup 实现漏洞：NULL 检查与重复 strlen
 
 ## 🎯 题目 / 场景
 
@@ -153,10 +153,10 @@ if (copy == NULL) {
   ```
 
 ### 横向关联
-- **CS50笔记**[[10_编程/笔记/cs50-week4-memory-notes/05-malloc-free]]（malloc/free详解）
-- **CS50笔记**[[10_编程/笔记/cs50-week4-memory-notes/04-strings]]（字符串操作）
-- **CS50笔记**[[10_编程/笔记/cs50-week4-memory-notes/07-valgrind]]（内存泄漏检测）
-- **关联错题**：[[2.4] 空指针解引用]（NULL检查的重要性）
+- 对应笔记：[[10_编程/笔记/cs50-week4-memory-notes/05-malloc-free]]
+- 相关笔记：[[10_编程/笔记/cs50-week4-memory-notes/04-strings]]
+- 相关笔记：[[10_编程/笔记/cs50-week4-memory-notes/07-valgrind]]
+- 相近错题：[[10_编程/错题本/02_Memory_Address/2.4 空指针解引用]]（NULL检查的重要性）
 
 ### 工程启示
 > **防御式编程3原则**：

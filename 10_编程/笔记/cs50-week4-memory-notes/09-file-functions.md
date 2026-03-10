@@ -1,104 +1,81 @@
 ---
-title: "9）常见文件函数：怎么选、怎么用"
+title: "9）文件函数：先分家族，再背格式"
 type: 编程学习笔记
 language: C
 module: 输入输出
 created: 2026-03-07
-review_after: 2026-03-08
+review_after: 2026-03-11
 tags:
   - 编程
   - C语言
-  - CS50
+  - 文件函数
   - 学习笔记
-source: CS50 / 恢复整理
+source: AI 陪学整理
 ---
 
-# 9）常见文件函数：怎么选、怎么用
+# 9）文件函数：先分家族，再背格式
 
 ## 🎯 一句话结论
 
-> 先别背所有文件函数，只要先分清：按格式、按字符串、按数据块。
+> 文件函数先别一股脑硬背，先分三家：按格式、按字符串、按数据块。
 
-## 📌 这节课到底在解决什么
+## 📌 这节只解决什么
 
-- 解决“看到题时，怎么立刻判断该叫哪一类文件函数”
-- 核心是分家族，不是读项目模板
+- 题目一来，先该想哪一类函数
+- 为什么 `fp` 有时在最前，有时在最后
+- `fread / fwrite` 为什么最容易记混
 
-## 🤔 核心概念
-
-### `fprintf / fscanf`
-
-- 按格式写 / 读
-- `fp` 在最前
+## ✅ 最小正确写法
 
 ```c
 fprintf(fp, "%s,%s\n", name, number);
+fgets(line, sizeof(line), fp);
+fwrite(a, sizeof(int), 4, fp);
 ```
 
-```c
-char word[32];
-if (fscanf(fp, "%31s", word) != 1) {
-    return 1;
-}
-```
+## 🔁 代码桥
 
-### `fgets / fputs`
+### 先看“按格式”
 
-- 按字符串读 / 写
-- `fp` 在最后
+- `fprintf / fscanf`
+- 特征：`fp` 在最前
 
-```c
-char line[256];
-while (fgets(line, sizeof(line), fp) != NULL) {
-    printf("%s", line);
-}
-```
+### 再看“按字符串”
 
-```c
-fputs(line, fp);
-```
+- `fgets / fputs`
+- 特征：`fp` 在最后
 
-### `fread / fwrite`
+### 最后看“按数据块”
 
-- 按数据块读 / 写
+- `fread / fwrite`
 - 固定顺序：`ptr, size, count, fp`
 
-```c
-fwrite(a, sizeof(int), 4, fp);
-fread(b, sizeof(int), 2, fp);
-```
+## ⚠️ 易混点
 
-## ✅ 正确做法
+### `fprintf / fscanf` vs `fgets / fputs`
 
-- 文本文件优先想：`fprintf / fgets`
-- 需要按格式解析时再想：`fscanf`
-- 二进制块搬运时想：`fread / fwrite`
-- 需要跳位置时想：`fseek`
+- 前者：按格式
+- 后者：按字符串
+- 一句话区分：看到格式串 `%d %s`，优先想前者
 
-## ⚠️ 常见坑
+### `fread / fwrite` 的返回值
 
-- `fscanf / fprintf` 的 `fp` 在最前
-- `fgets / fputs` 的 `fp` 在最后
-- `fread / fwrite` 返回的是“块数”，不是字节数
-- 新手阶段容易把 `fgetc` 和 `fgets` 混掉
+- 返回的是“读/写了多少块”
+- 不是“多少字节”
+- 一句话区分：`count` 写的是块数，返回值也看块数
 
-## 🔍 高阶视角（视情况补充）
+## 💥 高频坑
 
-- 文本文件：好读、好调试
-- 二进制文件：搬运快，但更不直观
-- 项目实践清单和长模板代码已移到：[[10_编程/笔记/cs50-week4-memory-notes/11-file-io-practice-archive]]
+- `fprintf / fscanf` 忘了 `fp` 在最前
+- `fgets / fputs` 忘了 `fp` 在最后
+- `fgetc` 和 `fgets` 粗心混掉
+- `fread / fwrite` 参数顺序写错
 
-## 🧠 我的卡点
+## 🧪 自测
 
-- 我看到题时，能不能先分出它属于哪一家
-- 我能不能不混 `fgetc / fgets`
-- 我能不能记住 `fread / fwrite` 的参数顺序
-
-## 🔁 24小时复习
-
-- 我能否手写 1 个文本读写模板
-- 我能否手写 1 个块读写模板
-- 我能否说出三大家族的区别
+- [ ] 我能把三大家族分清
+- [ ] 我能说出 `fgets` 的三个参数分别是什么
+- [ ] 我能解释 `fread` 为什么要写 `size` 和 `count`
 
 ## 🔗 关联
 

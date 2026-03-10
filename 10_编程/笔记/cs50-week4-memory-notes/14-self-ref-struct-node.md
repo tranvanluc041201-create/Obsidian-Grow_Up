@@ -131,5 +131,6 @@ a.next = &b;
 ## 🔗 关联
 
 - [[10_编程/笔记/cs50-week4-memory-notes/13-struct-value-copy]]
+- [[10_编程/思维导图/Node与链表-微导图]]
 - [[10_编程/思维导图/NCRE-结构体联合typedef与链表记忆图]]
 - [[10_编程/思维导图/NCRE-跨图串联记忆图]]

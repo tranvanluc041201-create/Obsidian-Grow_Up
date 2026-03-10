@@ -81,6 +81,46 @@ fread(b, sizeof(int), 2, fp);
 fclose(fp);
 ```
 
+## ✅ `fseek` 怎么看
+
+- `fseek(fp, offset, SEEK_SET)`
+  - 把文件光标移动到指定位置
+- `SEEK_SET`
+  - 以文件开头为 0 开始数
+- `offset`
+  - 按字节数算
+
+### 这句怎么翻成动作
+
+```c
+fseek(fp, sizeof(int) * 2, SEEK_SET);
+```
+
+- `sizeof(int) * 2`
+  - 跳过两个 `int`
+- `SEEK_SET`
+  - 从文件开头开始跳
+- 整句意思
+  - 把光标移到第 3 个 `int` 的位置
+
+### 最小结果图
+
+```text
+文件里: 1  2  3  4
+光标到:       ^
+```
+
+如果后面接：
+
+```c
+fread(b, sizeof(int), 2, fp);
+```
+
+那么：
+
+- `b[0] = 3`
+- `b[1] = 4`
+
 ## ⚠️ 高频坑
 
 - `fopen` 失败先看 `NULL`
@@ -88,6 +128,8 @@ fclose(fp);
 - `fgets / fputs` 的 `fp` 在最后
 - `fread / fwrite` 不按字节数，按“块数”返回
 - `w` 会清空，`a` 会追加，`r` 要求文件先存在
+- 只读已有文件时，优先想 `rb`
+- `wb+` 虽然也能读写，但会先清空原文件
 
 ## 🔁 默写顺序
 

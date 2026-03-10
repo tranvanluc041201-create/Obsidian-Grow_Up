@@ -1,25 +1,42 @@
-    # Obsidian 工作区和缓存
-    .obsidian/workspace.json
-    .obsidian/workspace-mobile.json
-    .obsidian/cache/
-    
-    # 系统文件
-    .DS_Store
-    .Trash-*/
-    Thumbs.db
-    
-    # 日志文件
-    *.log
-    
-    # Smart Connections 索引（防止大文件污染仓库）
-    .smart-connections/
-    smart-connections/
-    embeddings/
-    vector-db/
-    index/
-    
+# Obsidian 工作区和缓存
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache/
+.obsidian/copilot-index-*.json
+
+# 社区插件安装包本体
+# 保留 data.json 等配置，忽略可重装的插件分发文件
+.obsidian/plugins/*/main.js
+.obsidian/plugins/*/manifest.json
+.obsidian/plugins/*/styles.css
+.obsidian/plugins/*/.gitignore
+
+# 系统文件
+.DS_Store
+.Trash-*/
+Thumbs.db
+
+# 日志文件
+*.log
+error.log
+pywinauto-mcp.log
+
+# 运行时目录
+.trash/
+.playwright-cli/
+recovery_tmp/
+
+# Smart Connections / AI 索引（防止大文件污染仓库）
+.smart-env/
+.smart-connections/
+smart-connections/
+embeddings/
+vector-db/
+index/
+
 # 其他 AI 插件缓存
 copilot-index/
+.copilot-index/
 ai-cache/
 
 # 包含敏感信息的插件配置

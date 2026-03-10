@@ -1,181 +1,75 @@
 ---
-title: "sizeof 数组 vs 指针专项练习"
+title: "15）sizeof、strlen、数组、指针"
 type: 编程学习笔记
 language: C
 module: 内存地址
 created: 2026-03-07
-review_after: 2026-03-08
+review_after: 2026-03-11
 tags:
   - 编程
   - C语言
-  - CS50
+  - sizeof
+  - strlen
   - 学习笔记
-source: CS50 / 恢复整理
+source: AI 陪学整理
 ---
 
-# sizeof 数组 vs 指针专项练习
+# 15）sizeof、strlen、数组、指针
 
-*创建时间：2026-02-21*  
-*来源：诊断测试盲区专项*  
-*难度：L2（概念区分）*
+## 🎯 一句话结论
 
----
+> `sizeof` 看的是类型/对象占多少字节；`strlen` 看的是字符串有多少个字符，不算结尾 `'\0'`。
 
-# 🎯 核心认知
+## 📌 这节只解决什么
 
-### 本质区别
+- 为什么 `sizeof(arr)` 和 `sizeof(p)` 经常不一样
+- 为什么 `strlen` 不算 `'\0'`
+- 为什么数组传参后 `sizeof` 容易失真
+
+## ✅ 最小正确写法
 
 ```c
-char s[] = "abc";     // s 是数组（编译时确定大小）
-char *p = "abc";      // p 是指针（存地址，大小固定）
+char s[] = "abc";
+char *p = s;
+
+printf("%zu\n", sizeof(s));  // 4
+printf("%zu\n", sizeof(p));  // 8（64 位常见）
+printf("%zu\n", strlen(s));  // 3
 ```
 
-| 表达式 | 结果 | 解释 |
-|--------|------|------|
-| `sizeof(s)` | 4 | 数组总大小：'a','b','c','\0' = 4字节 |
-| `sizeof(p)` | 8 | 指针大小：64位系统 = 8字节 |
-| `strlen(s)` | 3 | 字符串长度（不含'\0'） |
-| `strlen(p)` | 3 | 同上 |
+## 🔁 代码桥
 
----
+- `sizeof(s)`
+  - 看整个对象占多少字节
+  - `s` 是数组时，看整数组
+- `sizeof(p)`
+  - `p` 是指针时，只看指针本身大小
+- `strlen(s)`
+  - 从开头数到 `'\0'` 前为止
+  - 不把 `'\0'` 算进去
 
-## 📐 关键规则
+## ⚠️ 易混点
 
-### 规则1：sizeof数组 = 元素个数 × 元素大小
+| A | B | 怎么区分 |
+|---|---|---|
+| `sizeof(arr)` | `sizeof(*p)` | 前者看整个数组；后者看一个元素的类型大小 |
+| `sizeof(s)` | `strlen(s)` | 前者可能把 `'\0'` 也算上；后者不算 |
+| 数组本体 | 函数参数里的“数组” | 传参后常退化成指针 |
 
-```c
-int arr[5];
-printf("%zu\n", sizeof(arr));      // 20 (5 × 4字节)
-printf("%zu\n", sizeof(arr[0]));    // 4 (int大小)
-printf("%zu\n", sizeof(arr)/sizeof(arr[0]));  // 5 (数组元素个数)
-```
+## 💥 高频坑
 
-### 规则2：数组名在sizeof中不退化
+- 把 `strlen` 当成“数组总大小”
+- 在函数参数里还以为 `sizeof(arr)` 是整个数组大小
+- 看见 `sizeof(*p)` 没反应，其实它就是“指向类型的大小”
 
-```c
-void func(int arr[]) {
-    printf("%zu\n", sizeof(arr));   // 8！不是20
-}
-// 数组传参会退化为指针
-```
+## 🧪 自测
 
-### 规则3：指针sizeof恒为地址大小
+- [ ] 我能解释为什么 `"abc"` 的 `sizeof` 是 4、`strlen` 是 3
+- [ ] 我能解释 `sizeof(*p)` 为什么常等于“一个元素大小”
+- [ ] 我能说出数组传参后为什么容易变成指针大小
 
-```c
-char *pc;
-int *pi;
-double *pd;
+## 🔗 关联
 
-sizeof(pc);  // 8 (64位)
-sizeof(pi);  // 8 (64位)
-sizeof(pd);  // 8 (64位)
-// 所有指针大小相同，与指向类型无关
-```
-
----
-
-## 📝 练习题（3道递进）
-
-### 第1题：基础区分
-
-```c
-#include <stdio.h>
-int main() {
-    int arr[10];
-    int *p = arr;
-    
-    printf("%zu\n", sizeof(arr));   // ?
-    printf("%zu\n", sizeof(p));     // ?
-    printf("%zu\n", sizeof(*p));    // ?
-    return 0;
-}
-```
-
-**答案**：40, 8, 4
-
-**解析**：
-- `sizeof(arr)` = 10 × 4 = 40（数组总大小）
-- `sizeof(p)` = 8（指针大小）
-- `sizeof(*p)` = sizeof(int) = 4（指针指向的类型大小）
-
----
-
-### 第2题：函数参数陷阱
-
-```c
-#include <stdio.h>
-void print_size(int arr[]) {
-    printf("In func: %zu\n", sizeof(arr));
-}
-
-int main() {
-    int arr[10];
-    printf("In main: %zu\n", sizeof(arr));
-    print_size(arr);
-    return 0;
-}
-```
-
-**输出**：
-```
-In main: 40
-In func: 8
-```
-
-**解析**：数组传参会退化为指针，`arr[]` 实际就是 `int *arr`。
-
----
-
-### 第3题：二维数组
-
-```c
-#include <stdio.h>
-int main() {
-    int arr[3][4];
-    int (*p)[4] = arr;  // 数组指针
-    
-    printf("%zu\n", sizeof(arr));    // ?
-    printf("%zu\n", sizeof(arr[0])); // ?
-    printf("%zu\n", sizeof(p));      // ?
-    printf("%zu\n", sizeof(*p));     // ?
-    return 0;
-}
-```
-
-**答案**：48, 16, 8, 16
-
-**解析**：
-- `sizeof(arr)` = 3 × 4 × 4 = 48（整个二维数组）
-- `sizeof(arr[0])` = 4 × 4 = 16（第一行大小）
-- `sizeof(p)` = 8（指针大小）
-- `sizeof(*p)` = 16（p指向一行，即4个int）
-
----
-
-## 💡 记忆口诀
-
-> **sizeof看定义，不看值**  
-> **数组看元素，指针看地址**  
-> **传参会退化，sizeof失效**
-
----
-
-## 🔁 24小时复习
-
-- 我能否用自己的话说出这节的核心规则：
-- 我能否手写一个最小示例：
-- 我能否说出最容易错的一点：
-
-## 🔗 关联知识点
-
-- 指针退化：`03-pointers-null.md`
-- 数组指针：`02-memory-model.md`
-- 错题本：`02_Memory_Address/2.1 二维数组传参的地址计算-v1.1.md`
-
----
-
-*练习完成标志：能独立解释上述3题*
-
-
-
-
+- [[10_编程/笔记/cs50-week4-memory-notes/03-pointers-null]]
+- [[10_编程/笔记/cs50-week4-memory-notes/04-strings]]
+- [[10_编程/错题本/02_Memory_Address/2.7 sizeof指针误解]]

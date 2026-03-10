@@ -9,8 +9,8 @@
   "weekly": {
     "enabled": true,
     "openOnStartup": false,
-    "folder": "10_Math/90_Dashboards",
-    "template": "99_Templates/math_weekly_review",
+    "folder": "10_数学/元信息/每周回顾",
+    "template": "99_Templates/数学/每周回顾模板",
     "filenameFormat": "gggg-[W]WW"
   },
   "monthly": {

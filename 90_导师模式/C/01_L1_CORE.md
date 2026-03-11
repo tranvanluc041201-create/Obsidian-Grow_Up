@@ -41,6 +41,7 @@
 | `卡住了` | `02_L2_MODES.md` → 止损模式 | 防死磕 |
 | `错题本` | `03_L3_TEMPLATES.md` → ERROR_TEMPLATE | 整理错题 |
 | `整理笔记` | `03_L3_TEMPLATES.md` → NOTE_TEMPLATE | 整理笔记 |
+| `思维导图` / `脑图` | `03_L3_TEMPLATES.md` → 思维导图协作模板 | 先定图型，再协作出骨架 |
 
 ---
 

@@ -16,9 +16,9 @@ status: demo
 如果你当前开着本地服务，这里应该能直接看到交互件：
 
 <iframe
-  src="http://127.0.0.1:8765/00_Inbox/codex-function-demo.html"
+  src="http://127.0.0.1:8765/00_Inbox/codex-function-demo.html?v=20260311b"
   width="100%"
-  height="640"
+  height="820"
   style="border: 1px solid rgba(15, 76, 129, 0.18); border-radius: 16px; background: #ffffff;">
 </iframe>
 
@@ -30,5 +30,5 @@ status: demo
 
 ## 备用打开方式
 
-- [浏览器打开交互 demo](http://127.0.0.1:8765/00_Inbox/codex-function-demo.html)
+- [浏览器打开交互 demo](http://127.0.0.1:8765/00_Inbox/codex-function-demo.html?v=20260311b)
 - [[codex-function-demo.html|同目录查看源文件]]

@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>抽象概念动态可视化测试</title>
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --panel: #ffffff;
+      --text: #16203a;
+      --muted: #62708a;
+      --line: #d8deeb;
+      --accent: #0d5ea6;
+      --accent-soft: #dbeeff;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: linear-gradient(180deg, #eef4fb 0%, var(--bg) 100%);
+      color: var(--text);
+    }
+
+    .wrap {
+      width: min(1180px, calc(100vw - 32px));
+      margin: 28px auto 48px;
+    }
+
+    .hero {
+      padding: 24px 28px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 18px 40px rgba(21, 35, 64, 0.08);
+    }
+
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: 42px;
+      line-height: 1.12;
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 860px;
+      color: var(--muted);
+      font-size: 20px;
+      line-height: 1.7;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 12px;
+      margin: 24px 0 20px;
+      flex-wrap: wrap;
+    }
+
+    .tab {
+      padding: 10px 18px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--muted);
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .tab.active {
+      background: var(--text);
+      color: #fff;
+      border-color: var(--text);
+    }
+
+    .panel {
+      display: grid;
+      grid-template-columns: minmax(300px, 1.1fr) minmax(280px, 0.9fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 24px 26px;
+      box-shadow: 0 16px 32px rgba(24, 38, 68, 0.08);
+    }
+
+    .card h2 {
+      margin: 0 0 8px;
+      font-size: 38px;
+      line-height: 1.2;
+    }
+
+    .card .lead {
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+
+    .formula {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 14px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 18px;
+      font-size: 18px;
+    }
+
+    .control {
+      margin-bottom: 18px;
+    }
+
+    .control-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+      gap: 12px;
+    }
+
+    .control label {
+      font-weight: 700;
+    }
+
+    .pill {
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #eef3fa;
+      color: var(--text);
+      min-width: 74px;
+      text-align: center;
+      font-variant-numeric: tabular-nums;
+    }
+
+    input[type="range"] {
+      width: 100%;
+      accent-color: var(--accent);
+    }
+
+    .stats {
+      display: grid;
+      gap: 14px;
+    }
+
+    .stat {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+      background: linear-gradient(180deg, #fff 0%, #f7faff 100%);
+    }
+
+    .stat .label {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .stat .value {
+      font-size: 28px;
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .hint {
+      font-size: 14px;
+      color: var(--muted);
+      margin-top: 8px;
+      line-height: 1.6;
+    }
+
+    .visual {
+      margin-top: 16px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: #fbfdff;
+    }
+
+    svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    @media (max-width: 900px) {
+      .hero h1 { font-size: 34px; }
+      .hero p { font-size: 18px; }
+      .panel { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <h1>抽象概念动态可视化测试</h1>
+      <p>
+        这个测试页只验证一件事：把公式里的变量变成可拖动对象后，
+        你能不能更快看出“变量改变 -> 图形变化 -> 结果变化”的关系。
+      </p>
+    </section>
+
+    <div class="tabs">
+      <button class="tab active" data-target="decay">指数衰减</button>
+      <button class="tab" data-target="lens">薄透镜公式</button>
+    </div>
+
+    <section id="decay" class="demo panel">
+      <div class="card">
+        <div class="formula">N(t) = N₀ e<sup>-λt</sup></div>
+        <h2>指数衰减</h2>
+        <div class="lead">
+          这里最重要的不是记公式，而是看见：衰减常数越大，下降越快；时间越往后，数值越接近 0。
+        </div>
+
+        <div class="control">
+          <div class="control-top">
+            <label for="n0">初始值 N₀</label>
+            <div class="pill" id="n0Value">100.0</div>
+          </div>
+          <input id="n0" type="range" min="20" max="200" step="5" value="100" />
+        </div>
+
+        <div class="control">
+          <div class="control-top">
+            <label for="lambda">衰减常数 λ</label>
+            <div class="pill" id="lambdaValue">0.30</div>
+          </div>
+          <input id="lambda" type="range" min="0.05" max="1.00" step="0.05" value="0.30" />
+        </div>
+
+        <div class="control">
+          <div class="control-top">
+            <label for="time">时间 t</label>
+            <div class="pill" id="timeValue">4.0</div>
+          </div>
+          <input id="time" type="range" min="0" max="10" step="0.2" value="4" />
+        </div>
+
+        <div class="visual">
+          <svg viewBox="0 0 560 280" aria-label="指数衰减图">
+            <line x1="44" y1="22" x2="44" y2="238" stroke="#9aa7bf" stroke-width="2"></line>
+            <line x1="44" y1="238" x2="532" y2="238" stroke="#9aa7bf" stroke-width="2"></line>
+            <text x="10" y="30" fill="#62708a" font-size="14">N(t)</text>
+            <text x="526" y="258" fill="#62708a" font-size="14">t</text>
+            <path id="decayCurve" d="" fill="none" stroke="#0d5ea6" stroke-width="4" stroke-linecap="round"></path>
+            <line id="decayGuideX" x1="0" y1="0" x2="0" y2="0" stroke="#9ab7d1" stroke-dasharray="6 6" stroke-width="2"></line>
+            <line id="decayGuideY" x1="0" y1="0" x2="0" y2="0" stroke="#9ab7d1" stroke-dasharray="6 6" stroke-width="2"></line>
+            <circle id="decayPoint" cx="0" cy="0" r="7" fill="#0d5ea6"></circle>
+          </svg>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <div class="label">当前值 N(t)</div>
+          <div class="value" id="decayNow">30.12</div>
+          <div class="hint">你拖动的 t 所对应的函数值。</div>
+        </div>
+        <div class="stat">
+          <div class="label">半衰期</div>
+          <div class="value" id="halfLife">2.31</div>
+          <div class="hint">半衰期 = ln(2) / λ。λ 越大，半衰期越短。</div>
+        </div>
+        <div class="stat">
+          <div class="label">直觉提示</div>
+          <div class="value" id="decayInsight" style="font-size:24px;">下降较快</div>
+          <div class="hint">把公式、曲线和一句直觉绑在一起，更容易记住抽象关系。</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="lens" class="demo panel hidden">
+      <div class="card">
+        <div class="formula">1/f = 1/do + 1/di</div>
+        <h2>薄透镜公式</h2>
+        <div class="lead">
+          这里看的是：物距 do 变化后，像距 di 和放大率 m 会怎样联动变化。
+          我把例子限制在成实像区域，让关系更直观。
+        </div>
+
+        <div class="control">
+          <div class="control-top">
+            <label for="focus">焦距 f</label>
+            <div class="pill" id="focusValue">6.0</div>
+          </div>
+          <input id="focus" type="range" min="3" max="12" step="0.5" value="6" />
+        </div>
+
+        <div class="control">
+          <div class="control-top">
+            <label for="objectDistance">物距 do</label>
+            <div class="pill" id="objectDistanceValue">18.0</div>
+          </div>
+          <input id="objectDistance" type="range" min="7" max="30" step="0.5" value="18" />
+        </div>
+
+        <div class="visual">
+          <svg viewBox="0 0 560 300" aria-label="薄透镜成像图">
+            <line x1="26" y1="230" x2="534" y2="230" stroke="#aeb8cb" stroke-width="2"></line>
+            <line x1="280" y1="38" x2="280" y2="260" stroke="#17223b" stroke-width="6"></line>
+            <text x="286" y="54" fill="#17223b" font-size="15">透镜</text>
+            <line id="focusLeft" x1="0" y1="220" x2="0" y2="240" stroke="#62708a" stroke-width="3"></line>
+            <line id="focusRight" x1="0" y1="220" x2="0" y2="240" stroke="#62708a" stroke-width="3"></line>
+            <text id="focusLeftText" x="0" y="262" fill="#62708a" font-size="16" text-anchor="middle">F</text>
+            <text id="focusRightText" x="0" y="262" fill="#62708a" font-size="16" text-anchor="middle">F</text>
+
+            <line id="objectArrow" x1="0" y1="230" x2="0" y2="0" stroke="#173f73" stroke-width="6"></line>
+            <polygon id="objectHead" points="" fill="#173f73"></polygon>
+            <text id="objectLabel" x="0" y="262" fill="#173f73" font-size="16" text-anchor="middle">物体</text>
+
+            <line id="imageArrow" x1="0" y1="230" x2="0" y2="0" stroke="#0d5ea6" stroke-width="6"></line>
+            <polygon id="imageHead" points="" fill="#0d5ea6"></polygon>
+            <text id="imageLabel" x="0" y="262" fill="#0d5ea6" font-size="16" text-anchor="middle">像</text>
+
+            <line id="ray1a" x1="0" y1="0" x2="280" y2="0" stroke="#8d9bb3" stroke-width="3"></line>
+            <line id="ray1b" x1="280" y1="0" x2="0" y2="230" stroke="#8d9bb3" stroke-width="3" stroke-dasharray="8 7"></line>
+            <line id="ray2a" x1="0" y1="0" x2="280" y2="230" stroke="#b6c4d7" stroke-width="3"></line>
+            <line id="ray2b" x1="280" y1="230" x2="0" y2="0" stroke="#b6c4d7" stroke-width="3" stroke-dasharray="8 7"></line>
+          </svg>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <div class="label">像距 di</div>
+          <div class="value" id="imageDistance">9.00</div>
+          <div class="hint">物距接近焦距时，像距会迅速拉远。</div>
+        </div>
+        <div class="stat">
+          <div class="label">放大率 m</div>
+          <div class="value" id="magnification">-0.50</div>
+          <div class="hint">负号表示倒立，绝对值表示放大或缩小的程度。</div>
+        </div>
+        <div class="stat">
+          <div class="label">直觉提示</div>
+          <div class="value" id="lensInsight" style="font-size:24px;">缩小倒立实像</div>
+          <div class="hint">这里最适合理解“变量联动”，比只背公式更有感觉。</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll(".tab");
+    const demos = document.querySelectorAll(".demo");
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        tabs.forEach((item) => item.classList.remove("active"));
+        demos.forEach((demo) => demo.classList.add("hidden"));
+        tab.classList.add("active");
+        document.getElementById(tab.dataset.target).classList.remove("hidden");
+      });
+    });
+
+    const n0Input = document.getElementById("n0");
+    const lambdaInput = document.getElementById("lambda");
+    const timeInput = document.getElementById("time");
+
+    function updateDecay() {
+      const n0 = Number(n0Input.value);
+      const lambda = Number(lambdaInput.value);
+      const t = Number(timeInput.value);
+      const current = n0 * Math.exp(-lambda * t);
+      const halfLife = Math.log(2) / lambda;
+
+      document.getElementById("n0Value").textContent = n0.toFixed(1);
+      document.getElementById("lambdaValue").textContent = lambda.toFixed(2);
+      document.getElementById("timeValue").textContent = t.toFixed(1);
+      document.getElementById("decayNow").textContent = current.toFixed(2);
+      document.getElementById("halfLife").textContent = halfLife.toFixed(2);
+
+      let insight = "下降较慢";
+      if (lambda >= 0.65) insight = "下降很快";
+      else if (lambda >= 0.3) insight = "下降较快";
+      document.getElementById("decayInsight").textContent = insight;
+
+      const x0 = 44;
+      const y0 = 238;
+      const width = 488;
+      const height = 190;
+      const tMax = 10;
+      const maxY = n0;
+
+      let d = "";
+      for (let i = 0; i <= 100; i++) {
+        const tx = (i / 100) * tMax;
+        const value = n0 * Math.exp(-lambda * tx);
+        const x = x0 + (tx / tMax) * width;
+        const y = y0 - (value / maxY) * height;
+        d += `${i === 0 ? "M" : "L"} ${x.toFixed(2)} ${y.toFixed(2)} `;
+      }
+
+      const pointX = x0 + (t / tMax) * width;
+      const pointY = y0 - (current / maxY) * height;
+
+      document.getElementById("decayCurve").setAttribute("d", d.trim());
+      document.getElementById("decayPoint").setAttribute("cx", pointX.toFixed(2));
+      document.getElementById("decayPoint").setAttribute("cy", pointY.toFixed(2));
+      document.getElementById("decayGuideX").setAttribute("x1", x0);
+      document.getElementById("decayGuideX").setAttribute("y1", pointY.toFixed(2));
+      document.getElementById("decayGuideX").setAttribute("x2", pointX.toFixed(2));
+      document.getElementById("decayGuideX").setAttribute("y2", pointY.toFixed(2));
+      document.getElementById("decayGuideY").setAttribute("x1", pointX.toFixed(2));
+      document.getElementById("decayGuideY").setAttribute("y1", pointY.toFixed(2));
+      document.getElementById("decayGuideY").setAttribute("x2", pointX.toFixed(2));
+      document.getElementById("decayGuideY").setAttribute("y2", y0);
+    }
+
+    [n0Input, lambdaInput, timeInput].forEach((input) => input.addEventListener("input", updateDecay));
+
+    const focusInput = document.getElementById("focus");
+    const objectDistanceInput = document.getElementById("objectDistance");
+
+    function clampObjectDistance() {
+      const f = Number(focusInput.value);
+      const minDo = Math.max(f + 0.5, 3);
+      objectDistanceInput.min = minDo.toFixed(1);
+      if (Number(objectDistanceInput.value) <= minDo) {
+        objectDistanceInput.value = (minDo + 0.5).toFixed(1);
+      }
+    }
+
+    function setArrow(lineId, headId, x, yTop, color, upright) {
+      const line = document.getElementById(lineId);
+      const head = document.getElementById(headId);
+      line.setAttribute("x1", x);
+      line.setAttribute("x2", x);
+      line.setAttribute("y1", 230);
+      line.setAttribute("y2", yTop);
+
+      const size = 14;
+      const tipY = yTop;
+      const baseY = upright ? yTop + size : yTop - size;
+      const points = upright
+        ? `${x},${tipY} ${x - 8},${baseY} ${x + 8},${baseY}`
+        : `${x},${tipY} ${x - 8},${baseY} ${x + 8},${baseY}`;
+      head.setAttribute("points", points);
+      head.setAttribute("fill", color);
+    }
+
+    function updateLens() {
+      clampObjectDistance();
+      const f = Number(focusInput.value);
+      const doValue = Number(objectDistanceInput.value);
+      const di = 1 / (1 / f - 1 / doValue);
+      const m = -di / doValue;
+
+      document.getElementById("focusValue").textContent = f.toFixed(1);
+      document.getElementById("objectDistanceValue").textContent = doValue.toFixed(1);
+      document.getElementById("imageDistance").textContent = di.toFixed(2);
+      document.getElementById("magnification").textContent = m.toFixed(2);
+
+      let lensInsight = "缩小倒立实像";
+      if (Math.abs(m) > 1.05) lensInsight = "放大倒立实像";
+      else if (Math.abs(m) >= 0.95) lensInsight = "接近等大倒立实像";
+      document.getElementById("lensInsight").textContent = lensInsight;
+
+      const lensX = 280;
+      const scale = 11;
+      const objectX = lensX - doValue * scale;
+      const imageX = lensX + di * scale;
+      const objectHeight = 76;
+      const imageHeight = objectHeight * m;
+      const objectTop = 230 - objectHeight;
+      const imageTop = 230 + imageHeight;
+
+      const focusLeftX = lensX - f * scale;
+      const focusRightX = lensX + f * scale;
+      document.getElementById("focusLeft").setAttribute("x1", focusLeftX);
+      document.getElementById("focusLeft").setAttribute("x2", focusLeftX);
+      document.getElementById("focusRight").setAttribute("x1", focusRightX);
+      document.getElementById("focusRight").setAttribute("x2", focusRightX);
+      document.getElementById("focusLeftText").setAttribute("x", focusLeftX);
+      document.getElementById("focusRightText").setAttribute("x", focusRightX);
+
+      setArrow("objectArrow", "objectHead", objectX, objectTop, "#173f73", true);
+      setArrow("imageArrow", "imageHead", imageX, imageTop, "#0d5ea6", false);
+      document.getElementById("objectLabel").setAttribute("x", objectX);
+      document.getElementById("imageLabel").setAttribute("x", imageX);
+
+      document.getElementById("ray1a").setAttribute("x1", objectX);
+      document.getElementById("ray1a").setAttribute("y1", objectTop);
+      document.getElementById("ray1a").setAttribute("x2", lensX);
+      document.getElementById("ray1a").setAttribute("y2", objectTop);
+      document.getElementById("ray1b").setAttribute("x1", lensX);
+      document.getElementById("ray1b").setAttribute("y1", objectTop);
+      document.getElementById("ray1b").setAttribute("x2", imageX);
+      document.getElementById("ray1b").setAttribute("y2", 230);
+
+      document.getElementById("ray2a").setAttribute("x1", objectX);
+      document.getElementById("ray2a").setAttribute("y1", objectTop);
+      document.getElementById("ray2a").setAttribute("x2", lensX);
+      document.getElementById("ray2a").setAttribute("y2", 230);
+      document.getElementById("ray2b").setAttribute("x1", lensX);
+      document.getElementById("ray2b").setAttribute("y1", 230);
+      document.getElementById("ray2b").setAttribute("x2", imageX);
+      document.getElementById("ray2b").setAttribute("y2", imageTop);
+    }
+
+    [focusInput, objectDistanceInput].forEach((input) => input.addEventListener("input", updateLens));
+
+    updateDecay();
+    updateLens();
+  </script>
+</body>
+</html>

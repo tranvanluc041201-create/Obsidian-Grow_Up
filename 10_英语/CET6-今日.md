@@ -75,6 +75,14 @@
 - 材料：GitHub Trending / `promptfoo` README
 - 类型：技术英语精读 + 中译英迁移
 
+**当前进度**
+- [x] Sentence 1：主干与 `for + V-ing` 用途判断
+- [x] Sentence 2：`stop A - start B` 逻辑与 `shipping` 语境义
+- [x] 中译英初稿完成
+- [x] 中译英纠错与原因讲解完成
+- [ ] 今晚脱离答案重写 1 次
+- 当前状态：`进行中`，今天这轮还差最后一次延迟回忆重写才算完整结束
+
 **原句 1**
 - `promptfoo` is a CLI and library for evaluating and red-teaming LLM apps.
 - 结构抓手：主系表；`for + V-ing` 放在表语内部，说明工具用途

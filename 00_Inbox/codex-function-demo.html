@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>函数变换交互演示</title>
+  <style>
+    :root {
+      --bg: #eef3f7;
+      --panel: rgba(255, 255, 255, 0.82);
+      --line: #0f4c81;
+      --line-soft: #7fa5c7;
+      --axis: #73859b;
+      --text: #132238;
+      --muted: #516379;
+      --accent: #d46a3a;
+      --border: rgba(15, 76, 129, 0.14);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(212, 106, 58, 0.12), transparent 28%),
+        linear-gradient(180deg, #f7fafc 0%, var(--bg) 100%);
+      color: var(--text);
+    }
+
+    .page {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 28px;
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      gap: 22px;
+    }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      box-shadow: 0 18px 40px rgba(29, 51, 84, 0.08);
+      backdrop-filter: blur(10px);
+    }
+
+    .controls {
+      padding: 24px 22px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(15, 76, 129, 0.1);
+      color: var(--line);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    h1 {
+      margin: 14px 0 10px;
+      font-size: 40px;
+      line-height: 1.08;
+    }
+
+    .sub {
+      margin: 0 0 20px;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.65;
+    }
+
+    .equation {
+      padding: 16px 18px;
+      border-radius: 16px;
+      background: rgba(15, 76, 129, 0.06);
+      font-size: 28px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 18px;
+    }
+
+    .control {
+      margin-bottom: 20px;
+    }
+
+    .control-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .value-pill {
+      min-width: 70px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: #f0f5fa;
+      text-align: center;
+      color: var(--line);
+      font-weight: 700;
+    }
+
+    input[type="range"] {
+      width: 100%;
+      accent-color: var(--line);
+    }
+
+    .insight {
+      margin-top: 16px;
+      padding: 16px 18px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, rgba(212, 106, 58, 0.12), rgba(15, 76, 129, 0.08));
+    }
+
+    .insight h2 {
+      margin: 0 0 10px;
+      font-size: 16px;
+      color: var(--muted);
+    }
+
+    .insight-main {
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .insight-copy {
+      line-height: 1.65;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .viz {
+      padding: 24px;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: 18px;
+    }
+
+    .viz-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .viz-head h2 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .viz-head p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+      max-width: 640px;
+    }
+
+    svg {
+      width: 100%;
+      height: 560px;
+      border-radius: 18px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.85), rgba(245, 249, 252, 0.88)),
+        linear-gradient(90deg, rgba(15, 76, 129, 0.03) 1px, transparent 1px),
+        linear-gradient(rgba(15, 76, 129, 0.03) 1px, transparent 1px);
+      background-size: auto, 48px 48px, 48px 48px;
+      border: 1px solid var(--border);
+    }
+
+    .facts {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .fact {
+      padding: 16px 18px;
+      border-radius: 16px;
+      background: rgba(15, 76, 129, 0.05);
+    }
+
+    .fact-label {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 6px;
+    }
+
+    .fact-value {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--text);
+    }
+
+    .fact-copy {
+      margin-top: 6px;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    @media (max-width: 980px) {
+      .page {
+        grid-template-columns: 1fr;
+      }
+
+      .facts {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <section class="panel controls">
+      <span class="badge">Codex 生成的交互件</span>
+      <h1>函数平移与开口</h1>
+      <p class="sub">
+        这个 demo 不是帮你死记公式，而是让你拖动参数后，立刻看见图像、顶点和一句直觉提示怎么一起变。
+      </p>
+
+      <div class="equation" id="equationText">y = 1(x - 0)^2 + 0</div>
+
+      <div class="control">
+        <div class="control-head">
+          <label for="aRange">开口系数 a</label>
+          <div class="value-pill" id="aValue">1.00</div>
+        </div>
+        <input id="aRange" type="range" min="-2" max="2" step="0.25" value="1" />
+      </div>
+
+      <div class="control">
+        <div class="control-head">
+          <label for="hRange">水平平移 h</label>
+          <div class="value-pill" id="hValue">0.00</div>
+        </div>
+        <input id="hRange" type="range" min="-4" max="4" step="0.25" value="0" />
+      </div>
+
+      <div class="control">
+        <div class="control-head">
+          <label for="kRange">竖直平移 k</label>
+          <div class="value-pill" id="kValue">0.00</div>
+        </div>
+        <input id="kRange" type="range" min="-4" max="4" step="0.25" value="0" />
+      </div>
+
+      <div class="insight">
+        <h2>直觉提示</h2>
+        <div class="insight-main" id="insightMain">标准开口向上抛物线</div>
+        <div class="insight-copy" id="insightCopy">
+          当前顶点在原点，开口向上，宽窄处于基准状态。你现在看到的是“最标准模板”。
+        </div>
+      </div>
+    </section>
+
+    <section class="panel viz">
+      <div class="viz-head">
+        <div>
+          <h2>图像联动区</h2>
+          <p>蓝线是当前函数图像，橙点是顶点。你会看到：`h` 只负责左右平移，`k` 只负责上下平移，`a` 决定开口方向和宽窄。</p>
+        </div>
+      </div>
+
+      <svg viewBox="0 0 820 560" role="img" aria-label="函数图像联动图">
+        <g id="grid"></g>
+        <line id="xAxis" x1="40" y1="280" x2="780" y2="280" stroke="#73859b" stroke-width="2"></line>
+        <line id="yAxis" x1="410" y1="40" x2="410" y2="520" stroke="#73859b" stroke-width="2"></line>
+        <g id="ticks"></g>
+        <path id="curve" fill="none" stroke="#0f4c81" stroke-width="4" stroke-linecap="round"></path>
+        <circle id="vertexDot" cx="410" cy="280" r="7.5" fill="#d46a3a"></circle>
+        <line id="vertexGuideX" x1="410" y1="280" x2="410" y2="520" stroke="#d46a3a" stroke-width="2" stroke-dasharray="6 6"></line>
+        <line id="vertexGuideY" x1="40" y1="280" x2="410" y2="280" stroke="#d46a3a" stroke-width="2" stroke-dasharray="6 6"></line>
+        <text id="vertexLabel" x="424" y="260" fill="#d46a3a" font-size="18" font-weight="700">顶点 (0, 0)</text>
+      </svg>
+
+      <div class="facts">
+        <div class="fact">
+          <div class="fact-label">顶点</div>
+          <div class="fact-value" id="vertexValue">(0.00, 0.00)</div>
+          <div class="fact-copy">这是图像的最低点或最高点。看顶点的位置，比背公式更容易把平移感建立起来。</div>
+        </div>
+        <div class="fact">
+          <div class="fact-label">开口方向</div>
+          <div class="fact-value" id="openDirection">向上</div>
+          <div class="fact-copy">`a > 0` 向上，`a < 0` 向下。这个判断必须形成反射，不要每次都重新想。</div>
+        </div>
+        <div class="fact">
+          <div class="fact-label">宽窄感</div>
+          <div class="fact-value" id="widthSense">标准</div>
+          <div class="fact-copy">`|a|` 越大越窄，越靠近 0 越宽。这个是很多人只会背但没有图像感觉的地方。</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const aRange = document.getElementById("aRange");
+    const hRange = document.getElementById("hRange");
+    const kRange = document.getElementById("kRange");
+
+    const equationText = document.getElementById("equationText");
+    const curve = document.getElementById("curve");
+    const vertexDot = document.getElementById("vertexDot");
+    const vertexGuideX = document.getElementById("vertexGuideX");
+    const vertexGuideY = document.getElementById("vertexGuideY");
+    const vertexLabel = document.getElementById("vertexLabel");
+    const vertexValue = document.getElementById("vertexValue");
+    const openDirection = document.getElementById("openDirection");
+    const widthSense = document.getElementById("widthSense");
+    const insightMain = document.getElementById("insightMain");
+    const insightCopy = document.getElementById("insightCopy");
+
+    const xToSvg = (x) => 410 + x * 62;
+    const yToSvg = (y) => 280 - y * 62;
+
+    function formatSigned(value) {
+      return value >= 0 ? `+ ${value.toFixed(2)}` : `- ${Math.abs(value).toFixed(2)}`;
+    }
+
+    function formatH(h) {
+      return h >= 0 ? `(x - ${h.toFixed(2)})` : `(x + ${Math.abs(h).toFixed(2)})`;
+    }
+
+    function buildAxes() {
+      const grid = document.getElementById("grid");
+      const ticks = document.getElementById("ticks");
+      let gridMarkup = "";
+      let tickMarkup = "";
+
+      for (let i = -6; i <= 6; i += 1) {
+        const x = xToSvg(i);
+        const y = yToSvg(i);
+        gridMarkup += `<line x1="${x}" y1="40" x2="${x}" y2="520" stroke="rgba(15,76,129,0.08)" stroke-width="1"></line>`;
+        gridMarkup += `<line x1="40" y1="${y}" x2="780" y2="${y}" stroke="rgba(15,76,129,0.08)" stroke-width="1"></line>`;
+
+        if (i !== 0) {
+          tickMarkup += `<line x1="${x}" y1="272" x2="${x}" y2="288" stroke="#73859b" stroke-width="2"></line>`;
+          tickMarkup += `<text x="${x}" y="312" text-anchor="middle" font-size="15" fill="#516379">${i}</text>`;
+          tickMarkup += `<line x1="402" y1="${y}" x2="418" y2="${y}" stroke="#73859b" stroke-width="2"></line>`;
+          tickMarkup += `<text x="388" y="${y + 5}" text-anchor="end" font-size="15" fill="#516379">${i}</text>`;
+        }
+      }
+
+      grid.innerHTML = gridMarkup;
+      ticks.innerHTML = tickMarkup;
+    }
+
+    function update() {
+      const a = Number(aRange.value);
+      const h = Number(hRange.value);
+      const k = Number(kRange.value);
+
+      document.getElementById("aValue").textContent = a.toFixed(2);
+      document.getElementById("hValue").textContent = h.toFixed(2);
+      document.getElementById("kValue").textContent = k.toFixed(2);
+
+      equationText.textContent = `y = ${a.toFixed(2)}${formatH(h)}^2 ${formatSigned(k)}`;
+
+      let path = "";
+      for (let px = -6; px <= 6; px += 0.05) {
+        const py = a * (px - h) * (px - h) + k;
+        const sx = xToSvg(px);
+        const sy = yToSvg(py);
+        path += `${path ? " L" : "M"} ${sx.toFixed(2)} ${sy.toFixed(2)}`;
+      }
+      curve.setAttribute("d", path);
+
+      const vx = xToSvg(h);
+      const vy = yToSvg(k);
+      vertexDot.setAttribute("cx", vx);
+      vertexDot.setAttribute("cy", vy);
+      vertexGuideX.setAttribute("x1", vx);
+      vertexGuideX.setAttribute("y1", vy);
+      vertexGuideX.setAttribute("x2", vx);
+      vertexGuideX.setAttribute("y2", 520);
+      vertexGuideY.setAttribute("x1", 40);
+      vertexGuideY.setAttribute("y1", vy);
+      vertexGuideY.setAttribute("x2", vx);
+      vertexGuideY.setAttribute("y2", vy);
+      vertexLabel.setAttribute("x", vx + 14);
+      vertexLabel.setAttribute("y", vy - 12);
+      vertexLabel.textContent = `顶点 (${h.toFixed(2)}, ${k.toFixed(2)})`;
+
+      vertexValue.textContent = `(${h.toFixed(2)}, ${k.toFixed(2)})`;
+      openDirection.textContent = a > 0 ? "向上" : a < 0 ? "向下" : "退化";
+
+      let width = "标准";
+      if (Math.abs(a) > 1.25) width = "更窄";
+      else if (Math.abs(a) < 0.75 && Math.abs(a) > 0.001) width = "更宽";
+      else if (Math.abs(a) <= 0.001) width = "近似水平线";
+      widthSense.textContent = width;
+
+      let main = "标准开口向上抛物线";
+      let copy = "当前顶点在原点，开口向上，宽窄处于基准状态。你现在看到的是“最标准模板”。";
+
+      if (Math.abs(a) <= 0.001) {
+        main = "抛物线退化成水平线";
+        copy = "当 a 接近 0，二次项几乎失去作用，图像主要只剩下 y = k 这一层含义。这个状态很适合帮你理解 a 的本质。";
+      } else {
+        const direction = a > 0 ? "向上" : "向下";
+        const widthCopy = width === "更窄" ? "图像更瘦，说明 |a| 变大了。" : width === "更宽" ? "图像更平，说明 |a| 在减小。" : "图像宽窄接近标准模板。";
+        main = `${direction}开口，顶点在 (${h.toFixed(2)}, ${k.toFixed(2)})`;
+        copy = `h 负责左右平移，k 负责上下平移。现在顶点已经从原点移动到 (${h.toFixed(2)}, ${k.toFixed(2)})，${widthCopy}`;
+      }
+
+      insightMain.textContent = main;
+      insightCopy.textContent = copy;
+    }
+
+    buildAxes();
+    update();
+    [aRange, hRange, kRange].forEach((input) => input.addEventListener("input", update));
+  </script>
+</body>
+</html>

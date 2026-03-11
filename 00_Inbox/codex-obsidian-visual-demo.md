@@ -18,7 +18,7 @@ status: demo
 <iframe
   src="http://127.0.0.1:8765/00_Inbox/codex-function-demo.html"
   width="100%"
-  height="860"
+  height="640"
   style="border: 1px solid rgba(15, 76, 129, 0.18); border-radius: 16px; background: #ffffff;">
 </iframe>
 
